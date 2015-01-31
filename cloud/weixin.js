@@ -4,6 +4,7 @@ var TOKEN="https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential"
 var CODE="https://api.weixin.qq.com/sns/oauth2/access_token?grant_type=authorization_code"
 var USERINFO="https://api.weixin.qq.com/sns/userinfo?lang=zh_CN"
 
+
 var https = require('https');
 
 var options = {
@@ -15,25 +16,25 @@ var options = {
 
  exports.token=function(cb){
   var tokenURL=TOKEN+"&appid="+APPID+"&secret="+SECRET;
-  https.get(tokenURL, function(res) {
-  console.log("statusCode: ", res.statusCode);
-  console.log("headers: ", res.headers);
-
-  res.on('data', function(d) {
-    console.log(JSON.parse(d).access_token);
-    cb(JSON.parse(d).access_token);
-  });
-
-}).on('error', function(e) {
-  console.error(e);
-});
-
+  gethttps(cb);
 }
 
 exports.openid=function(code,cb){
   var codeURL=CODE+"&appid="+APPID+"&secret="+SECRET+"&code="+code;
-  console.log(codeURL);
-  https.get(codeURL, function(res) {
+  gethttps(codeURL,cb);
+}
+
+exports.userinfo=function(info,cb){
+ info=JSON.parse(info);
+  var ACCESS_TOKEN=info.access_token;
+  var OPENID=info.openid;
+  var userinfoURL=USERINFO+"&access_token="+ACCESS_TOKEN+"&openid="+OPENID;
+  console.log(userinfoURL);
+  gethttps(userinfoURL,cb);
+}
+
+var gethttps=function(url,cb){
+  https.get(url, function(res) {
    res.on('data', function(d) {
     console.log(d);
     cb(d);
@@ -42,12 +43,4 @@ exports.openid=function(code,cb){
 }).on('error', function(e) {
   console.error(e);
 });
-
-}
-
-exports.userinfo=function(cb){
-  var ACCESS_TOKEN="";
-  var OPENID=""
-  var userinfoURL=USERINFO+"&access_token="+ACCESS_TOKEN+"&openid="+OPENID;
-  console.log(userinfoURL);
 }

@@ -21,10 +21,7 @@ app.get('/hello', function(req, res) {
   res.render('hello', { message: 'Congrats, you just set up your app!' });
 });
 
-app.get('/weixin', function(req, res) {
-  var echostr=req.param('echostr');
-  res.end(echostr);
-});
+
 
 
 app.post('/addAsk',function(req,res){
@@ -39,6 +36,10 @@ app.get('/allAsk',function(req,res){
      });
 });
 
+app.get('/weixin', function(req, res) {
+  var echostr=req.param('echostr');
+  res.end(echostr);
+});
 
 //weixin
 app.get("/token",function(req,res){
@@ -51,6 +52,15 @@ app.get("/openid",function(req,res){
         var code= req.param('code');
         wx.openid(code,function(data){
           res.end(data);
+        })
+});
+
+app.get("/userinfo",function(req,res){
+        var code= req.param('code');
+        wx.openid(code,function(data){
+          wx.userinfo(data,function(d){
+             res.end(d);
+          })      
         })
 });
 
