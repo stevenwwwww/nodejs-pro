@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+		<meta name="misapplication-tap-highlight" content="no"/>
+		<meta name="HandheldFriendly" content="true"/>
+		<meta name="MobileOptimized" content="320"/>
+		<link rel="stylesheet" href="http://apps.bdimg.com/libs/jquerymobile/1.4.2/jquery.mobile.min.css">
+		<script src="http://apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>
+		<script src="http://apps.bdimg.com/libs/jquerymobile/1.4.2/jquery.mobile.min.js"></script>
+	    <style type="text/css">
+	    .main{text-align:center;}
+	    button.ui-btn.ui-shadow.ui-corner-all {
+font-size: 0.1em;
+color: red;
+width: 22%;
+border-radius: 30px;
+margin-left: 5%;
+}
+/*button#b1 {
+float: right;
+}
+button#b3 {
+float: right;
+}
+button#b6 {
+clear: both;
+}
+button#b7 {
+float: right;
+position: relative;
+bottom: 60px;
+}
+.a-more {
+text-align: center;
+margin-left: 30%;
+}*/
+.control-label {
+text-align: center;
+float: right;
+width: 100%;
+}
+button#b1 {
+position: relative;
+left: 70%;
+}
+button#b2 {
+float: right;
+position: relative;
+right: 25%;
+/* margin: 0px auto; */
+/* text-align: center; */
+}
+button#b3 {
+position: relative;
+bottom: 50px;
+/* clear: right; */
+}
+button#b5 {
+float: right;
+}
+.a-more {
+text-align: center;}
+.content {
+width: 100%;
+}
+.ui-input-text.ui-body-inherit.ui-corner-all.ui-shadow-inset {
+margin-left: 5%;
+height: 50px;
+padding-top: 20px;
+}
+.ui-btn.ui-input-btn.ui-corner-all.ui-shadow.ui-btn-inline {
+position: relative;
+bottom: 60px;
+right: 2%;
+float: right;
+}
+span#sp-txt {
+font-size: 0.1em;
+margin-left: 1.5em;
+}
+.div-txt {
+font-size: 0.9em;
+}
+/*a.ui-link.ui-btn.ui-shadow.ui-corner-all.ui-last-child {
+width: 7em;
+background: #000;
+color: #fff;
+}
+a.ui-link.ui-btn.ui-shadow.ui-corner-all.ui-first-child {
+width: 7em;
+background: #000;
+color: #fff;
+}
+.ui-controlgroup-controls {
+width: 100%;
+margin-left: 5%;
+
+}
+.ui-controlgroup.ui-controlgroup-horizontal.ui-corner-all {
+ margin: 0px auto; 
+position: fixed;
+bottom: 0;
+ left: 10%; 
+}
+*/
+.ui-footer.ui-bar-inherit {
+position: fixed;
+width: 100%;
+bottom: 0;
+}
+.footer {
+background: #ccc;
+height: 30px;
+position: fixed;
+bottom: 0;
+width: 100%;
+text-align: center;
+padding-top: 20px;
+}
+span.sp-footer {
+padding-right: 5em;
+}
+a.ui-link {
+text-decoration: none;
+}
+	    </style>
+	</head>
+	<body>
+		<div class="content">
+		<div class="main">
+			我已经收到了<a><%=count%></a>个回复
+		</div>
+		<div id="btn">
+			 <% var i=0;
+			 for (var k in data){ %>
+                                                 <button id="b1">  <%=k%>*<%=data[k]%> </button>
+                                                <% i++;if(i==5)break;}%>	
+					
+		</div>
+		<div class="a-more" id="amore">
+			<a >查看更多</a>
+		</div>
+
+       <form method="post" action="/addAns">
+      <div data-role="fieldcontain" id="bimg">
+        <label for="fullname"></label>
+        <input type="text" name="content" id="fullname" placeholder="留点儿东西再走吧">  
+        <input id="submit" type="submit" data-inline="true" value="实名发布">
+      </div>      
+    </form>
+    <span id="sp-txt" >
+    		也许你想说...
+    	</span>
+    <div class="control-label">
+    	<div class="div-txt" id="alltxt">
+    </div>
+   
+		</div>
+		<div class="footer">
+   <span class="sp-footer">
+   	<a href="#">我也要提问</a>
+   </span>
+   <span class="sp-footer01">
+   	<a href="#">了解山茶花</a>
+   </span>
+		</div>
+  </div>
+
+  <script type="text/javascript">
+$("#amore").click(function(){
+$.ajax( {    
+    url:'/allans',
+    type:'post',    
+    dataType:'json',    
+    success:function(data) {    
+       var sdiv=$("#alltxt");
+       for(var d in data){
+        sdiv.append("<a>"+d+"</a>")
+       }
+     }
+}); 
+});
+
+
+  </script>
+	</body>
+</html>

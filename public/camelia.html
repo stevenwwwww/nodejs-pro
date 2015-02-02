@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+<meta name="misapplication-tap-highlight" content="no"/>
+<meta name="HandheldFriendly" content="true"/>
+<meta name="MobileOptimized" content="320"/>
+<link rel="stylesheet" href="http://apps.bdimg.com/libs/jquerymobile/1.4.2/jquery.mobile.min.css">
+<script src="http://apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="http://apps.bdimg.com/libs/jquerymobile/1.4.2/jquery.mobile.min.js"></script>
+<style type="text/css">
+.ui-header.ui-bar-inherit {
+background: #080808;
+color: #fff;
+}
+.ui-footer.ui-bar-inherit {
+background: #080808;
+color: #fff;
+position: fixed;
+bottom: 0;
+width: 100%;
+}
+.ui-btn.ui-input-btn.ui-corner-all.ui-shadow.ui-btn-inline {
+/*position: relative;
+left: 170px;*/
+}
+img {
+width: 100%;
+/*height: 100%;*/
+}
+img.user-img {
+width: 25%;
+position: relative;
+bottom: 95px;
+}
+/*.ui-content {
+position: relative;
+bottom: 80px;
+}
+*/
+.ui-block-a
+{
+background-color: lightgray;
+border: 1px solid black;
+height: 100px;
+font-weight: bold;
+text-align: center;
+padding: 30px;
+}
+.ui-btn.ui-input-btn.ui-corner-all.ui-shadow.ui-btn-inline.ui-mini {
+width: 80px;
+margin-left: 160px;
+}
+img.head-low {
+position: absolute;
+ float: right; 
+height: 100px;
+}
+img.img-color {
+float: left;
+z-index: 9;
+position: relative;
+height: 70px;
+width: 70px;
+}
+img.head {
+height: 70px;
+width: 70px;
+position: relative;
+z-index: 99;
+bottom: 70px;
+}
+input.on
+{
+background-color:red;
+}
+
+</style>
+</head>
+<body>
+
+<div data-role="page">
+  <div data-role="header">
+    <h1>2015我想和我的朋友圈谈谈</h1>
+  </div>
+ 	<div class="ui-grid-b">
+     <div class="ui-block-b">
+     	<img class="img-color" src="img/head_img@2x.png"/>
+     	<img class="head-low" src="img/head-low.png"/>
+     	<img class="head" src="<%= img%>"/>
+     </div>
+   </div>
+  <div data-role="content">
+    <form method="post" action="/addAsk">
+       <div data-role="fieldcontain">
+        <label for="info"></label>
+        <textarea name="problem" id="info"><%= nickname %></textarea>
+      </div>
+      <input type="submit" data-mini="true" data-inline="true" value="提问并分享">
+    </form> 
+   <script>
+	$(document).ready(function(){
+	  $("input[name='btn']").click(function(){ 
+	    $("input[name='btn']").removeClass('on');
+	    $(this).addClass('on');
+	    $('#info').text($(this).val());
+	  });
+	});
+	</script>
+  
+    <div class="div-btn">
+    <input type="button" name="btn"   value="你觉得我男朋友怎么样,畅所欲言" class="on1">
+	<input type="button" name="btn"   value="你觉得我女朋友怎么样？放开说">
+	<input type="button" name="btn"   value="请用一首歌来形容我吧">
+	<input type="button" name="btn"   value="求指出缺点，反正我也不会改">
+	<input type="button" name="btn"   value="你最想问我什么问题">
+	<input type="button" name="btn"   value="推荐给我一个有点贵但很值得买的东西吧">
+	<input type="button" name="btn"   value="你有见到我的节操嘛">
+	<input type="button" name="btn"   value="有哪些 100 元以下值得买的东西">
+	<input type="button" name="btn"   value="有哪些 1000 元以下，很少见但高大上的东西">
+	<input type="button" name="btn"   value="2015 年你推荐我去哪个地方旅行">
+	<input type="button" name="btn"   value="你最嫌弃我什么">
+	<input type="button" name="btn"   value="随便夸夸我吧">
+	<input type="button" name="btn"   value="你最希望我送你什么东西">
+	<input type="button" name="btn"   value="有哪些值得关注的公众账号">
+	<input type="button" name="btn"   value="在你眼里，我们是什么关系">
+	<input type="button" name="btn"   value="老实跟我讲，你骗过我嘛">
+	<input type="button" name="btn"   value="女生包包里必备的东西有哪些">
+	<input type="button" name="btn"   value="你有哪些奇怪的能力">
+	<input type="button" name="btn"   value="你觉得有几个人暗恋我">
+    <input type="button" name="btn"   value="我在你心里的印象是什么">
+    </div>
+  </div>
+
+  <div data-role="footer">
+  <h1>—此处深藏功与名—</h1>
+  </div>
+</div> 
+
+</body>
+</html>

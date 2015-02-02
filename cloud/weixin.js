@@ -16,7 +16,8 @@ var options = {
 
  exports.token=function(cb){
   var tokenURL=TOKEN+"&appid="+APPID+"&secret="+SECRET;
-  gethttps(cb);
+  console.log()
+  gethttps(tokenURL,cb);
 }
 
 exports.openid=function(code,cb){
