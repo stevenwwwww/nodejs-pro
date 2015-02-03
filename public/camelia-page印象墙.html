@@ -145,6 +145,7 @@ text-decoration: none;
 
        <form method="post" action="/addAns">
       <div data-role="fieldcontain" id="bimg">
+        <input type="hidden" name="askid" value="<%=askid%>">
         <label for="fullname"></label>
         <input type="text" name="content" id="fullname" placeholder="留点儿东西再走吧">  
         <input id="submit" type="submit" data-inline="true" value="实名发布">

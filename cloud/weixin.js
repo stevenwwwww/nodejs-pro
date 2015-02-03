@@ -7,16 +7,9 @@ var USERINFO="https://api.weixin.qq.com/sns/userinfo?lang=zh_CN"
 
 var https = require('https');
 
-var options = {
-  hostname: 'api.weixin.qq.com',
-  port: 443,
-  path: '/',
-  method: 'GET'
-};
-
  exports.token=function(cb){
   var tokenURL=TOKEN+"&appid="+APPID+"&secret="+SECRET;
-  console.log()
+ // console.log()
   gethttps(tokenURL,cb);
 }
 
@@ -30,14 +23,14 @@ exports.userinfo=function(info,cb){
   var ACCESS_TOKEN=info.access_token;
   var OPENID=info.openid;
   var userinfoURL=USERINFO+"&access_token="+ACCESS_TOKEN+"&openid="+OPENID;
-  console.log(userinfoURL);
+  //console.log(userinfoURL);
   gethttps(userinfoURL,cb);
 }
 
 var gethttps=function(url,cb){
   https.get(url, function(res) {
    res.on('data', function(d) {
-    console.log(d);
+    //console.log(d);
     cb(d);
   });
 

@@ -23,10 +23,7 @@ app.use(express.bodyParser());    // 读取请求 body 的中间件
 app.use(express.cookieParser());
 app.use(express.session({secret:'weixin'}));
 
-// 使用 Express 路由 API 服务 /hello 的 HTTP GET 请求
-app.get('/hello', function(req, res) {
-  res.render('camelia', { message: 'Congrats, you just set up your app!' });
-});
+
 
 //menu
 app.get("/myask",function(req,res){
@@ -47,14 +44,14 @@ app.get("/myask",function(req,res){
 });
 
 app.get('/myans',function(req,res){
-     var askid="";
+     var askid="54cf6322e4b0fe752de04136";//test
      answer.getAnswer(askid,function(count,data){
-           res.render('camelia-page印象墙', { count:count,data:data});
+           res.render('camelia-page印象墙', { count:count,data:data,askid:askid});
      });
 });
 
 app.post('/allans',function(req,res){
-     var askid="";
+     var askid="54cf6322e4b0fe752de04136";
      answer.getAnswer(askid,function(count,data){
       var rs=JSON.stringify(data);
           res.end(rs);
@@ -65,13 +62,34 @@ app.post('/allans',function(req,res){
 
 
 app.post('/addAsk',function(req,res){
-     ask.addAsk(req,res);
+     ask.addAsk(req,function(data){
+          var d=JSON.stringify(data);
+            d=JSON.parse(d);
+           req.session.objectid=d.objectId;
+           res.redirect("ask?askid="+d.objectId+"&openid="+d.openid);
+     });
+
+});
+
+app.get('/ask',function(req,res){
+     var askid=req.param('askid');
+     var openid=req.param('openid');
+     console.log(askid+openid);
+     if(req.session.objectid){
+          res.render("camelia-page03.html");
+     }else{
+          answer.getAnswer(askid,function(count,data){
+           res.render('camelia-page印象墙', { count:count,data:data,askid:askid});
+          });
+     }
+     
 });
 
 app.post('/addAns',function(req,res){
      answer.addAns(req,res);
 });
 
+//test
 app.get('/allAsk',function(req,res){
      ask.allAsk(function(data){     	
      	var rs=JSON.stringify(data);

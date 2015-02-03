@@ -1,14 +1,16 @@
  var Ask = AV.Object.extend("ask");
-exports.addAsk= function(req,res) {
+exports.addAsk= function(req,cb) {
                  var p=req.param('problem');
-                 console.log(req.session.userinfo);
-                 var wid=req.session.userinfo.openid;
-                 console.log(wid);
+                 //console.log(req.session.userinfo);
+                 var oid=req.session.userinfo.openid;
+                //var oid='ozhyouOzAZpcZoQoqdj7dOPiaYYQ';
+                 //console.log(oid);
                   var ask=new Ask();
-                  ask.save({problem:p,openid:wid},{
-                                 success:function(object){
-                                 	console.log(object);
-                                                 res.end();
+                  ask.save({problem:p,openid:oid},{
+                                 success:function(data){
+                                 	//console.log(data);
+                                                 //res.end();
+                                                 cb(data);
                                  }
 
                  });
@@ -24,4 +26,6 @@ exports.allAsk=function(callback){
   }
 });
 }
+
+
 

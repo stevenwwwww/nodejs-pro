@@ -1,6 +1,6 @@
 var Answer=AV.Object.extend("answer");
 exports.getAnswer=function(askid,callback){
-	var sql="select count(*),content from answer ";
+	var sql="select count(*),content from answer where askid='"+askid+"'";
 	console.log(sql);
   AV.Query.doCloudQuery(sql, {
   success: function(result){
@@ -26,7 +26,7 @@ exports.getAnswer=function(askid,callback){
 
 exports.addAns= function(req,res) {
                  var c=req.param('content');
-                 var aid=req.param('aid');
+                 var aid=req.param('askid');
                    var oid=req.param('oid');
                   var answer=new Answer();
                   answer.save({content:c,askid:aid,openid:oid},{
