@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+div
+{
+width:100px;
+height:100px;
+position:relative;
+animation-name:myfirst;
+animation-timing-function:linear;
+animation-delay:1s;
+animation-iteration-count:infinite;
+animation-direction:alternate;
+animation-play-state:running;
+animation:myfirst 1s; /* Safari and Chrome */
+/* Safari and Chrome: */
+-webkit-animation-name:myfirst;
+-webkit-animation-duration:1s;
+-webkit-animation-timing-function:linear;
+-webkit-animation-delay:1s;
+-webkit-animation-iteration-count:infinite;
+-webkit-animation-direction:alternate;
+-webkit-animation-play-state:running;
+}
+
+@keyframes myfirst
+{
+0%   {height:100px; }
+
+50%  {height:150px; }
+
+
+}
+
+@-webkit-keyframes myfirst /* Safari and Chrome */
+{
+0%   {height:100px; }
+
+50%  {height:150px; }
+
+}
+img{width:100%;height:100%;}
+</style>
+</head>
+<body>
+<div><img src="img/bao5.png"/></div>
+</body>
+</html>
+			

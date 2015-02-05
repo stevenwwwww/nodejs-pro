@@ -4,7 +4,7 @@
 		<meta charset="utf-8"/>
 		<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
 		<meta name="misapplication-tap-highlight" content="no"/>
-		<meta name="HandheldFriendly" content="true"/>
+		<meta name="HandheldFriendly" content="true"/> 
 		<meta name="MobileOptimized" content="320"/>
 		<link rel="stylesheet" href="http://apps.bdimg.com/libs/jquerymobile/1.4.2/jquery.mobile.min.css">
 		<script src="http://apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>
@@ -12,96 +12,251 @@
 	    <style type="text/css">
 	        body { overflow: hidden; }
 	        .head-img{
-	    	height: 3em;
-			width: 3em;
-			background-color: #F00;
+	    	height: 3.5em;
+			width: 3.5em;
 			border-radius: 40px;
+			clear: both;
 			}
 			.div-line {
 			border-left: 1px solid #000;
-			height: 30px;
-			margin-left: 7%;
+			height: 5.3em;
+			/* margin-left: 7%; */
+			float: left;
+			position: relative;
+			left: 2em;
 			}
-			.content{height: 20em;}
+		
 			.ui-footer.ui-bar-inherit {
             position: fixed;
 			width: 100%;
 			bottom: 0;
 			}
 			.content {
-			height: 20em;
-			margin-top: 20%;
-			margin-left: 15%;
+			padding-left: 20%;
+			overflow-y: auto;
+			margin-top: 3em;
+			width: 100%;
+			height: 100%;
 			}
+			img {
+            width: 3.5em;
+			}
+			.sp-txt {
+			font-family: "微软雅黑";
+			font-size: 0.5em;
+			display: block;
+			position: relative;
+			bottom: 3em;
+			left: 5em;
+			}
+			.sp-time{font-family: "微软雅黑";
+			font-size: 0.5em;
+			position: relative;
+			right: 5em;
+			bottom: 5em;
+			}
+	button.ui-btn.ui-shadow.ui-corner-all {
+width: 5em;
+height: 2.1em;
+font-size: 0.1em;
+/* padding-bottom: 0.1em; */
+position: relative;
+/* float: right; */
+/* padding-right: 3em; */
+margin-right: 25%;
+/* right: 5%; */
+bottom: 7.5em;
+left: 12em;
+}
+.footer {
+background: #ccc;
+height: 30px;
+position: fixed;
+bottom: 0;
+width: 100%;
+margin-top: 0px;
+margin-right: auto;
+margin-bottom: 0px;
+margin-left: auto;
+padding-top: 1em;
+}
+.sp-footer {
+float: left;
+text-align: center;
+width: 50%;
+}
+.sp-footer01{
+text-align: center;
+}
+a.ui-link {
+text-decoration: none;
+}
+
+.a-more {
+text-align: center;
+margin-bottom: 5em;
+}
+
+.ui-grid-b {
+background: #f7f7f7;
+width: 100%;
+height: 5em;
+}
+img.head {
+width: 5em;
+position: relative;
+z-index: 99;
+/* bottom: 70px; */
+right: 33.2%;
+}
+img.img-color {
+float: left;
+z-index: 9;
+position: relative;
+width: 5em;
+}
+button#btn-1 {
+float: right;
+width: 8em;
+height: 3em;
+background: red;
+margin-right: 13em;
+font-size: 0.2em;
+position: relative;
+top: 1.5em;
+}
 	    </style>
 	</head>
 	<body>
-		<div data-role="page">
-
-  <div data-role="header">
-    <h1>欢迎来到我的主页</h1>
-  </div>
-
+<div data-role="page">
+	<div class="ui-grid-b">
+     <div class="ui-block-b">
+     <img class="img-color" src="img/head_img@2x.png"/>   	
+     </div>
+     <img class="head" src="img/head.png"/>
+   </div>
+   	<button id="btn-1" name="btn">返回留言墙</button>
   <div class="content">
-  	
-  
-    <div class="head-img">
+  <div class="head-img">
+    	<img src="img/head.png"/>
     	
+    	<div class="div-line">
+    		
+    	</div>
     </div>
-  <div class="div-line">
-  	
-  </div>
+    
+    <span class="sp-txt">
+    		小呆  发布
+    	</span>
+    <span class="sp-txt">
+    		小呆  发布
+    	</span>
+    	 <span class="sp-time">
+    		30分钟前
+    	</span>
+    	<button name="btn">删除</button>
      <div class="head-img">
-    	
+    <img src="img/head.png"/>
     </div>
-  <div class="div-line">
-  	
-  </div>
+  <div class="div-line"></div>
+  <span class="sp-txt">
+    		小呆  发布
+    	</span>
+    <span class="sp-txt">
+    		小呆  发布
+    	</span>
+    	 <span class="sp-time">
+    		30分钟前
+    	</span>
+    	<button name="btn">删除</button>
      <div class="head-img">
-    	
+    	    	<img src="img/head.png"/>
     </div>
-  <div class="div-line">
-  	
-  </div>
+  <div class="div-line"></div>
+  <span class="sp-txt">
+    		小呆  发布
+    	</span>
+    <span class="sp-txt">
+    		小呆  发布
+    	</span>
+    	 <span class="sp-time">
+    		30分钟前
+    	</span>
+    	<button name="btn">删除</button>
      <div class="head-img">
-    	
+    	    	<img src="img/head.png"/>
     </div>
-  <div class="div-line">
-  	
-  </div>
+  <div class="div-line"></div>
+  <span class="sp-txt">
+    		小呆  发布
+    	</span>
+    <span class="sp-txt">
+    		小呆  发布
+    	</span>
+    	 <span class="sp-time">
+    		30分钟前
+    	</span>
+    	<button name="btn">删除</button>
   <div class="head-img">
-    	
+    	    	<img src="img/head.png"/>
     </div>
-  <div class="div-line">
-  	
-  </div>
-
+  <div class="div-line"></div>
+<span class="sp-txt">
+    		小呆  发布
+    	</span>
+    <span class="sp-txt">
+    		小呆  发布
+    	</span>
+    	 <span class="sp-time">
+    		30分钟前
+    	</span>
+    	<button name="btn">删除</button>
   <div class="head-img">
-    	
+    	    	<img src="img/head.png"/>
     </div>
-  <div class="div-line">
-  	
-  </div>
-
-  <div class="head-img">
+  <div class="div-line"></div>
+  <span class="sp-txt">
+    		小呆  发布
+    	</span>
     	
+    <span class="sp-txt">
+    		小呆  发布
+    	</span>
+    	 <span class="sp-time">
+    		30分钟前
+    	</span>
+    	<button name="btn">删除</button>
+    	<div class="head-img">
+    	    	<img src="img/head.png"/>
     </div>
-  <div class="div-line">
-  	
-  </div>
-
-  <div class="head-img">
-    	
+  <div class="div-line"></div>
+  <span class="sp-txt">
+    		小呆  发布
+    	</span>
+    <span class="sp-txt">
+    		小呆  发布
+    	</span>
+    	<div class="head-img">
+    	    	<img src="img/head.png"/>
     </div>
-  <div class="div-line">
-  	
-  </div>
-
+  <div class="div-line"></div>
+  <span class="sp-txt">
+    		小呆  发布
+    	</span>
+    <span class="sp-txt">
+    		小呆  发布
+    	</span>
 </div>
-  <div data-role="footer">
-    <h1>底部文本</h1>
-  </div>
-
-		
-	</body>
+<div class="a-more">
+			<a >查看更多</a>
+		</div>
+ <div class="footer">
+   <div class="sp-footer">
+   	<a href="#" class="ui-link">此处深藏功与名</a>
+   </div>
+   <div class="sp-footer01">
+   	<a href="#" class="ui-link">戳我分享给朋友</a>
+   </div>
+</div>
+</body>
 </html>
