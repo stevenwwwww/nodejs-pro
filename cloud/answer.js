@@ -23,17 +23,18 @@ exports.getAnswer=function(askid,callback){
 });
 }
 
-exports.getNowAnswer=function(openid,cb){
-var sql="select * from ask where openid='"+openid+"' limit 1 order by -updatedAt ";
-console.log(sql);
-AV.Query.doCloudQuery(sql, {
-  success: function(result){
-    var results = JSON.stringify(result.results);
-    results=JSON.parse(results);
-    console.log(results[0])
-    cb(results[0]) ;
-  }
-});
+exports.getNowAnswer=function(userinfo,cb){
+               var openid=userinfo.openid;
+                var sql="select * from ask where openid='"+openid+"' limit 1 order by -updatedAt ";
+                console.log(sql);
+                AV.Query.doCloudQuery(sql, {
+                                  success: function(result){
+                                                var results = JSON.stringify(result.results);
+                                                results=JSON.parse(results);
+                                                console.log(results[0])
+                                                cb(results[0]) ;
+                                  }
+                });
 }
 
 
@@ -51,17 +52,3 @@ exports.addAns= function(req,res) {
                  });
 }
 
-exports.myans=function(userinfo,res){
-    var openid=userinfo.openid;
-    var img=userinfo.headimgurl;
-             if (img==''){
-                 img="img/head.png";//default
-             }
-    getNowAnswer(openid,function(data){
-        var askid=data.objectId;
-        var p=data.problem;
-         getAnswer(askid,function(count,data){
-            res.render('camelia-page印象墙02', { count:count,data:data,askid:askid,p:p,img:img});
-        });
-     });
-}

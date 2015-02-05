@@ -29,34 +29,62 @@ app.use(express.session({secret:'weixin'}));
 app.get("/myask",function(req,res){
       var userinfo=req.session.userinfo;
       if(userinfo){
-          ask.myask(userinfo,res);
+                var img=userinfo.headimgurl;
+               if (img==''){
+                       userinfo.headimgurl="img/head.png";//default
+
+                 }
+        res.render('camelia', userinfo);
       }else{
-          var code= req.param('code');
-          wx.openid(code,function(data){
-          wx.userinfo(data,function(d){
-             userinfo=JSON.parse(d);
-             req.session.userinfo=userinfo;
-             ask.myask(userinfo,res);
-          })    
-        })
+                var code= req.param('code');
+                wx.openid(code,function(data){
+                        wx.userinfo(data,function(d){
+                              userinfo=JSON.parse(d);
+                              req.session.userinfo=userinfo;
+                              var img=userinfo.headimgurl;
+                               if (img==''){
+                                   img="img/head.png";//default
+                               }
+                              res.render('camelia', { openid:userinfo.openid,nickname:userinfo.nickname,img:img});
+                        })    
+              })
       }
-     
 });
 
 app.get('/myans',function(req,res){
      var userinfo= req.session.userinfo;
      if(userinfo){
-          answer.myans(userinfo,res);
+               var img=userinfo.headimgurl;
+                       if (img==''){
+                             img="img/head.png";//default
+                         }
+                answer.getNowAnswer(userinfo,function(data){
+                         var askid=data.objectId;
+                         var p=data.problem;
+                          answer. getAnswer(askid,function(count,data){
+                                   res.render('camelia-page印象墙02', { count:count,data:data,askid:askid,p:p,img:img,nickname:userinfo.nickname});
+                          });
+                })
      }else{
-          var code= req.param('code');
-          wx.openid(code,function(data){
-          wx.userinfo(data,function(d){
-             userinfo=JSON.parse(d);
-             req.session.userinfo=userinfo;
-             answer.myans(userinfo,res);
-          })    
-        }) 
-     } 
+               var code= req.param('code');
+               wx.openid(code,function(data){
+                       wx.userinfo(data,function(d){
+                                 userinfo=JSON.parse(d);
+                                 req.session.userinfo=userinfo;
+                                 var img=userinfo.headimgurl;
+                                 if (img==''){
+                                          img="img/head.png";//default
+                                   }
+                                  answer.getNowAnswer(userinfo,function(data){
+                                       var askid=data.objectId;
+                                       var p=data.problem;
+                                        answer. getAnswer(askid,function(count,data){
+                                                 res.render('camelia-page印象墙02', { count:count,data:data,askid:askid,p:p,img:img,nickname:userinfo.nickname});
+                                        });
+                                  })
+                       })    
+                }) 
+         } 
 });
 
 app.post('/allans',function(req,res){
