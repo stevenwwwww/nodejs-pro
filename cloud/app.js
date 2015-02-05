@@ -76,7 +76,7 @@ app.get('/ask',function(req,res){
      var openid=req.param('openid');
      console.log(askid+openid);
      if(req.session.objectid){
-          res.render("camelia-page03.html");
+          res.render("camelia-page02.html");
      }else{
           answer.getAnswer(askid,function(count,data){
            res.render('camelia-page印象墙', { count:count,data:data,askid:askid});

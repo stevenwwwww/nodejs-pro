@@ -116,6 +116,29 @@ z-index: 99;
 /* bottom: 70px; */
 right: 33.2%;
 }
+.div-inp {
+background: red;
+color: #000;
+float: left;
+position: relative;
+bottom: 3em;
+border-radius: 0.5em;
+padding-left: 1.5em;
+/* right: 2%; */
+left: 5.5em;
+}
+.div-user {
+/* background: red; */
+/* color: #000; */
+/* float: left; */
+position: relative;
+bottom: 3em;
+/* border-radius: 0.5em; */
+/* padding-left: 1.5em; */
+/* right: 2%; */
+left: 7em;
+font-size: em;
+}
 	</style>
 	</head>
 	<body>
@@ -124,27 +147,33 @@ right: 33.2%;
      <img class="img-color" src="img/head_img@2x.png"/>   	
      </div>
      <img class="head" src="img/head.png"/>
+     <div class="div-user">
+     	amon
+     </div>
+     <div class="div-inp">
+     	我在你心里的印象是什么？
+     </div>
    </div>
 		<div class="content">
 		<div class="main">
-			我已经收到了<a>10</a>个回复
+			我已经收到了<a><%=count%></a>个回复
 		</div>
 		<div id="btn">
-			<button id="b1">按钮 1</button>
-			<button id="b2">按钮 2</button>
-			<button id="b3">按钮 3</button>
-			<button id="b4">按钮 4</button>
-			<button id="b5">按钮 5</button>
-			<button id="b6">按钮 6</button>
-			<button id="b7">按钮 7</button>			
+			<% var i=0;
+			  for (var k in data){ %>
+			  	<button id="b1">  <%=k%>*<%=data[k]%> </button>
+			  	 <% i++;if(i==5)break;}%>
+								
 		</div>
-		<div class="a-more">
+		<div class="a-more"  id="amore">
 			<a >查看更多</a>
 		</div>
 
-       <form method="post" action="demo_form.php">
-      <div data-role="fieldcontain" id="bimg">
-        <input type="text" name="fullname" id="fullname" placeholder="留点儿东西再走吧">
+       <form method="post" action="/addAns">		+       <form method="post" action="demo_form.php">
+       <div data-role="fieldcontain" id="bimg">		       <div data-role="fieldcontain" id="bimg">
+        <input type="hidden" name="askid" value="<%=askid%>">		+        <input type="text" name="fullname" id="fullname" placeholder="留点儿东西再走吧">
+        <label for="fullname"></label>		
+        <input type="text" name="content" id="fullname" placeholder="留点儿东西再走吧">  
         <input id="submit" type="submit" data-inline="true" value="实名发布">
       </div>      
     </form>
@@ -163,7 +192,7 @@ right: 33.2%;
 })
 	</script>
     <div class="control-label">
-    	<div class="div-txt" id="txt1">
+    	<!--<div class="div-txt" id="txt1">
     	<a href="#" class="div-a">雌雄同体</a>
     	<a href="#" class="div-a">高冷女王</a>
     	<a href="#" class="div-a">移动的荷尔蒙</a>
@@ -172,7 +201,8 @@ right: 33.2%;
     	<a href="#" class="div-a">雌雄同体</a>
     	<a href="#" class="div-a">高冷女王</a>
     	<a href="#" class="div-a">移动的荷尔蒙</a>
-    	</div>
+    	</div>-->
+    		<div class="div-txt" id="alltxt"></div>
     </div>
    
 		</div>
@@ -185,5 +215,21 @@ right: 33.2%;
    </span>
 		</div>
   </div>
+   <script type="text/javascript">		
+$("#amore").click(function(){		
+$.ajax( {    		
+   url:'/allans',		
+    type:'post',    		
+   dataType:'json',    		
+    success:function(data) {    		
+       var sdiv=$("#alltxt");		
+        sdiv.append("<a>"+d+"</a>")		
+       }		
+     }		
+}); 		
+});		
+		
+		
+  </script>
 	</body>
 </html>

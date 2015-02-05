@@ -79,7 +79,29 @@ background-color:red;
 .div-btn {
 clear: both;
 }
-
+.div-inp {
+background: red;
+color: #000;
+float: left;
+position: relative;
+bottom: 3em;
+border-radius: 0.5em;
+padding-left: 1.5em;
+/* right: 2%; */
+left: 5.5em;
+}
+.div-user {
+/* background: red; */
+/* color: #000; */
+/* float: left; */
+position: relative;
+bottom: 3em;
+/* border-radius: 0.5em; */
+/* padding-left: 1.5em; */
+/* right: 2%; */
+left: 7em;
+font-size: em;
+}
 </style>
 </head>
 <body>
@@ -89,13 +111,16 @@ clear: both;
      <div class="ui-block-b">
      <img class="img-color" src="img/head_img@2x.png"/>   	
      </div>
-     <img class="head" src="img/head.png"/>
+     <img class="head" src="<%= img%>"/>
+     <div class="div-user">
+     	<%= nickname %>
+     </div>
    </div>
   <div data-role="content">
-    <form method="post" action="demoform.php">
+    <form method="post" action="/addAsk">
        <div data-role="fieldcontain">
         <label for="info"></label>
-        <textarea name="addinfo" id="info"></textarea>
+        <textarea name="problem" id="info"></textarea>
       </div>
       <input type="submit" data-mini="true" data-inline="true" value="提问并分享">
     </form> 
