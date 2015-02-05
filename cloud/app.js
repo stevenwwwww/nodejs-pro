@@ -27,27 +27,36 @@ app.use(express.session({secret:'weixin'}));
 
 //menu
 app.get("/myask",function(req,res){
-       var code= req.param('code');
-        wx.openid(code,function(data){
+      var userinfo=req.session.userinfo;
+      if(userinfo){
+          ask.myask(userinfo,res);
+      }else{
+          var code= req.param('code');
+          wx.openid(code,function(data){
           wx.userinfo(data,function(d){
-            var userinfo=JSON.parse(d);
+             userinfo=JSON.parse(d);
              req.session.userinfo=userinfo;
-             console.log(req.session.userinfo);
-             //res.redirect('camelia.html');
-             var img=userinfo.headimgurl;
-             if (img==''){
-              img="img/head.png";//default
-             }
-             res.render('camelia', { openid:userinfo.openid,nickname:userinfo.nickname,img:img});
+             ask.myask(userinfo,res);
           })    
         })
+      }
+     
 });
 
 app.get('/myans',function(req,res){
-     var askid="54cf6322e4b0fe752de04136";//test
-     answer.getAnswer(askid,function(count,data){
-           res.render('camelia-page印象墙', { count:count,data:data,askid:askid});
-     });
+     var userinfo= req.session.userinfo;
+     if(userinfo){
+          answer.myans(userinfo,res);
+     }else{
+          var code= req.param('code');
+          wx.openid(code,function(data){
+          wx.userinfo(data,function(d){
+             userinfo=JSON.parse(d);
+             req.session.userinfo=userinfo;
+             answer.myans(userinfo,res);
+          })    
+        }) 
+     } 
 });
 
 app.post('/allans',function(req,res){

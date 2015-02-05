@@ -27,5 +27,13 @@ exports.allAsk=function(callback){
 });
 }
 
+exports.myask=function(userinfo,res){
+        var img=userinfo.headimgurl;
+             if (img==''){
+                 img="img/head.png";//default
+             }
+        res.render('camelia', { openid:userinfo.openid,nickname:userinfo.nickname,img:img});
+}
+
 
 
