@@ -31,10 +31,9 @@ app.get("/myask",function(req,res){
       if(userinfo){
                 var img=userinfo.headimgurl;
                if (img==''){
-                       userinfo.headimgurl="img/head.png";//default
-
+                       img="img/head.png";//default
                  }
-        res.render('camelia', userinfo);
+        res.render('camelia', { openid:userinfo.openid,nickname:userinfo.nickname,img:img});
       }else{
                 var code= req.param('code');
                 wx.openid(code,function(data){
@@ -62,7 +61,7 @@ app.get('/myans',function(req,res){
                          var askid=data.objectId;
                          var p=data.problem;
                           answer. getAnswer(askid,function(count,data){
-                                   res.render('camelia-page印象墙02', { count:count,data:data,askid:askid,p:p,img:img,nickname:userinfo.nickname});
+                                   res.render('camelia-page印象墙02', { count:count,data:data,askid:askid,p:p,img:img});
                           });
                 })
      }else{
@@ -79,7 +78,7 @@ app.get('/myans',function(req,res){
                                        var askid=data.objectId;
                                        var p=data.problem;
                                         answer. getAnswer(askid,function(count,data){
-                                                 res.render('camelia-page印象墙02', { count:count,data:data,askid:askid,p:p,img:img,nickname:userinfo.nickname});
+                                                 res.render('camelia-page印象墙02', { count:count,data:data,askid:askid,p:p,img:img});
                                         });
                                   })
                        })    
