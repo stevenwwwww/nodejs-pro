@@ -6,8 +6,10 @@
 				color: #fff;
 				width: 22%;
 				border-radius: 30px;
-				margin-left: 5%;
+				/* margin-left: 5%; */
 				background: #969ea9;
+				height: 2.5em;
+				/* padding-bottom: 1em; */
 				}
 				.control-label {
 				text-align: center;
@@ -70,6 +72,9 @@
 				width: 100%;
 				bottom: 0;
 				}
+				a.a-t1.ui-link {
+color: rgba(255, 255, 255, 0);
+}
 				span.sp-footer {
 				padding-right: 5em;
 				}
