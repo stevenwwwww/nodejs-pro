@@ -1,0 +1,135 @@
+.main{text-align:center;
+	           color: #969ea9;
+	            }
+	    button.ui-btn.ui-shadow.ui-corner-all {
+				font-size: 0.1em;
+				color: #fff;
+				width: 22%;
+				border-radius: 30px;
+				margin-left: 5%;
+				background: #969ea9;
+				}
+				.control-label {
+				text-align: center;
+				float: right;
+				width: 100%;
+				}
+				button#b1 {
+				position: relative;
+				left: 70%;
+				top: 1em;
+				}
+				button#b2 {
+				float: right;
+				position: relative;
+				right: 36%;
+				/* margin: 0px auto; */
+				/* text-align: center; */
+				}
+				button#b3 {
+				position: relative;
+				bottom: 50px;
+				/* clear: right; */
+				}
+				button#b5 {
+				float: right;
+				}
+				.a-more {
+				text-align: center;}
+				.content {
+				width: 100%;
+				}
+				.ui-input-text.ui-body-inherit.ui-corner-all.ui-shadow-inset {
+				/* margin-left: 5%; */
+				padding-top: 1.3em;
+				/* margin: 0 auto; */
+				text-align: center;
+				}
+				.ui-btn.ui-input-btn.ui-corner-all.ui-shadow.ui-btn-inline {
+				position: relative;
+				/* bottom: 4.1em; */
+				/* right: 2%; */
+				float: right;
+				background: #b41b32;
+				color: #fff;
+				/* margin-left: 1em; */
+				/* padding-left: 1em; */
+				left: 1.5em;
+				border-radius: 18px;
+				}
+				span#sp-txt {
+				font-size: 0.1em;
+				margin-left: 1.5em;
+				}
+				.div-txt {
+				font-size: 0.9em;
+				}
+				
+				.ui-footer.ui-bar-inherit {
+				position: fixed;
+				width: 100%;
+				bottom: 0;
+				}
+				span.sp-footer {
+				padding-right: 5em;
+				}
+				a.ui-link {
+				text-decoration: none;
+				color: #656b74;
+				}
+				.special_color{
+				 color:#006633;
+				 font-family:"微软雅黑";
+				} 
+				.ui-grid-b {
+				background: #f7f7f7;
+				width: 100%;
+				height: 5em;
+				}
+				
+				img.img-color {
+				float: left;
+				z-index: 9;
+				position: relative;
+				width: 5em;
+				}
+				img.head {
+				width: 5em;
+				position: relative;
+				z-index: 99;
+				/* bottom: 70px; */
+				right: 33.2%;
+				}
+				.div-center {
+				/* margin: 0px auto; */
+				text-align: center;
+				width: 100%;
+				font-size: 0.8em;
+				position: absolute;
+				bottom: 5em;
+				/* margin-top: 28em; */
+				/* padding-top: 2em; */
+				}
+				.div-inp {
+background: red;
+color: #000;
+float: left;
+position: relative;
+bottom: 3em;
+border-radius: 0.5em;
+padding-left: 1.5em;
+/* right: 2%; */
+left: 5.5em;
+}
+.div-user {
+/* background: red; */
+/* color: #000; */
+/* float: left; */
+position: relative;
+bottom: 3em;
+/* border-radius: 0.5em; */
+/* padding-left: 1.5em; */
+/* right: 2%; */
+left: 7em;
+font-size: em;
+}

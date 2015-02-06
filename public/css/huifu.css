@@ -1,0 +1,159 @@
+ body { overflow: hidden; }
+	        .head-img{
+	    	height: 3.5em;
+			width: 3.5em;
+			border-radius: 40px;
+			clear: both;
+			}
+			.div-line {
+			border-left: 1px solid #000;
+			height: 5.3em;
+			/* margin-left: 7%; */
+			float: left;
+			position: relative;
+			left: 2em;
+			}
+			
+			.ui-footer.ui-bar-inherit {
+            position: fixed;
+			width: 100%;
+			bottom: 0;
+			}
+			.content {
+			padding-left: 20%;
+			overflow-y: auto;
+			margin-top: 3em;
+			width: 100%;
+			height: 100%;
+			}
+			img {
+            width: 3.5em;
+			}
+			.sp-txt {
+			font-family: "微软雅黑";
+			font-size: 0.5em;
+			display: block;
+			position: relative;
+			bottom: 3em;
+			left: 5em;
+			}
+			.sp-time{font-family: "微软雅黑";
+			font-size: 0.5em;
+			position: relative;
+			right: 5em;
+			bottom: 5em;
+			}
+	button.ui-btn.ui-shadow.ui-corner-all {
+width: 5em;
+height: 2.1em;
+font-size: 0.1em;
+/* padding-bottom: 0.1em; */
+position: relative;
+/* float: right; */
+/* padding-right: 3em; */
+margin-right: 25%;
+/* right: 5%; */
+bottom: 7.5em;
+left: 12em;
+}
+.footer {
+background: #000;
+height: 30px;
+position: fixed;
+bottom: 0;
+width: 100%;
+margin-top: 0px;
+margin-right: auto;
+margin-bottom: 0px;
+margin-left: auto;
+padding-top: 1em;
+}
+.sp-footer {
+float: left;
+text-align: center;
+width: 50%;
+}
+.sp-footer01{
+text-align: center;
+}
+a.ui-link {
+text-decoration: none;
+}
+
+.a-more {
+text-align: center;
+margin-bottom: 5em;
+}
+
+.ui-grid-b {
+background: #f7f7f7;
+width: 100%;
+height: 5em;
+}
+img.head {
+width: 5em;
+position: relative;
+z-index: 99;
+/* bottom: 70px; */
+right: 33.2%;
+}
+img.img-color {
+float: left;
+z-index: 9;
+position: relative;
+width: 5em;
+}
+#btn-1 {
+float: right;
+width: 8em;
+height: 2em;
+background: #b41b32;
+/* margin-left: 11em; */
+font-size: 0.2em;
+position: relative;
+left: 1.2em;
+top: 1.5em;
+border-radius: 2em;
+color: rgba(255, 255, 255, 0);
+/* font-family: -webkit-pictograph; */
+padding-top: 0.8em;
+text-align: center;
+}
+.div-inp {
+background: #b41b32;
+color: rgba(255, 255, 255, 0);
+float: left;
+position: relative;
+bottom: 3em;
+border-radius: 0.5em;
+padding-left: 1.5em;
+/* right: 2%; */
+left: 5.5em;
+}
+.div-user {
+/* background: red; */
+/* color: #000; */
+/* float: left; */
+position: relative;
+bottom: 3em;
+/* border-radius: 0.5em; */
+/* padding-left: 1.5em; */
+/* right: 2%; */
+left: 7em;
+font-size: em;
+}
+a.ui-link {
+color: rgba(255, 255, 255, 0);
+}
+.div-user {
+/* background: red; */
+/* color: #000; */
+/* float: left; */
+position: relative;
+bottom: 3em;
+/* border-radius: 0.5em; */
+/* padding-left: 1.5em; */
+/* right: 2%; */
+left: 7em;
+font-size: em;
+}
