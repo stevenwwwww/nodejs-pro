@@ -6,298 +6,33 @@
 		<meta name="misapplication-tap-highlight" content="no"/>
 		<meta name="HandheldFriendly" content="true"/> 
 		<meta name="MobileOptimized" content="320"/>
+		<link rel="stylesheet" type="text/css" href="css/huifu.css"/>
+		<link rel="stylesheet" type="text/css" href="css/huifu02.css"/>
 		<link rel="stylesheet" href="http://apps.bdimg.com/libs/jquerymobile/1.4.2/jquery.mobile.min.css">
 		<script src="http://apps.bdimg.com/libs/jquery/1.10.2/jquery.min.js"></script>
 		<script src="http://apps.bdimg.com/libs/jquerymobile/1.4.2/jquery.mobile.min.js"></script>
-	    <style type="text/css">
-	        body { overflow: hidden; }
-	        .head-img{
-	    	height: 3.5em;
-			width: 3.5em;
-			border-radius: 40px;
-			clear: both;
-			}
-			.div-line {
-			border-left: 1px solid #000;
-			height: 5.3em;
-			/* margin-left: 7%; */
-			float: left;
-			position: relative;
-			left: 2em;
-			}
-		
-			.ui-footer.ui-bar-inherit {
-            position: fixed;
-			width: 100%;
-			bottom: 0;
-			}
-			.content {
-			padding-left: 20%;
-			overflow-y: auto;
-			margin-top: 3em;
-			width: 100%;
-			height: 100%;
-			}
-			img {
-            width: 3.5em;
-			}
-			.sp-txt {
-			font-family: "微软雅黑";
-			font-size: 0.5em;
-			display: block;
-			position: relative;
-			bottom: 3em;
-			left: 5em;
-			}
-			.sp-time{font-family: "微软雅黑";
-			font-size: 0.5em;
-			position: relative;
-			right: 5em;
-			bottom: 5em;
-			}
-	button.ui-btn.ui-shadow.ui-corner-all {
-width: 5em;
-height: 2.1em;
-font-size: 0.1em;
-/* padding-bottom: 0.1em; */
-position: relative;
-/* float: right; */
-/* padding-right: 3em; */
-margin-right: 25%;
-/* right: 5%; */
-bottom: 7.5em;
-left: 12em;
-}
-.footer {
-background: #ccc;
-height: 30px;
-position: fixed;
-bottom: 0;
-width: 100%;
-margin-top: 0px;
-margin-right: auto;
-margin-bottom: 0px;
-margin-left: auto;
-padding-top: 1em;
-}
-.sp-footer {
-float: left;
-text-align: center;
-width: 50%;
-}
-.sp-footer01{
-text-align: center;
-}
-a.ui-link {
-text-decoration: none;
-}
-
-.a-more {
-text-align: center;
-margin-bottom: 5em;
-}
-
-.ui-grid-b {
-background: #f7f7f7;
-width: 100%;
-height: 5em;
-}
-img.head {
-width: 5em;
-position: relative;
-z-index: 99;
-/* bottom: 70px; */
-right: 33.2%;
-}
-img.img-color {
-float: left;
-z-index: 9;
-position: relative;
-width: 5em;
-}
-button#btn-1 {
-float: right;
-width: 8em;
-height: 3em;
-background: red;
-margin-right: 13em;
-font-size: 0.2em;
-position: relative;
-top: 1.5em;
-}
-.div-inp {
-background: red;
-color: #000;
-float: left;
-position: relative;
-bottom: 3em;
-border-radius: 0.5em;
-padding-left: 1.5em;
-/* right: 2%; */
-left: 5.5em;
-}
-.div-user {
-/* background: red; */
-/* color: #000; */
-/* float: left; */
-position: relative;
-bottom: 3em;
-/* border-radius: 0.5em; */
-/* padding-left: 1.5em; */
-/* right: 2%; */
-left: 7em;
-font-size: em;
-}
-.div-inp {
-background: red;
-color: #000;
-float: left;
-position: relative;
-bottom: 3em;
-border-radius: 0.5em;
-padding-left: 1.5em;
-/* right: 2%; */
-left: 5.5em;
-}
-.div-user {
-/* background: red; */
-/* color: #000; */
-/* float: left; */
-position: relative;
-bottom: 3em;
-/* border-radius: 0.5em; */
-/* padding-left: 1.5em; */
-/* right: 2%; */
-left: 7em;
-font-size: em;
-}
-	    </style>
 	</head>
 	<body>
-<div data-role="page">
+    <input type="hidden" id="askid" value="54d379bee4b02af83a03db58">
+<div data-role="page" id="pageone">
 	<div class="ui-grid-b">
      <div class="ui-block-b">
      <img class="img-color" src="img/head_img@2x.png"/>   	
      </div>
      <img class="head" src="img/head.png"/>
      <div class="div-user">
-     	amon
+     	<%=nickname%>
      </div>
      <div class="div-inp">
-     	我在你心里的印象是什么？
+      <%=p %>
+    ？
      </div>
    </div>
-   	<button id="btn-1" name="btn">返回留言墙</button>
-  <div class="content">
-  <div class="head-img">
-    	<img src="img/head.png"/>
-    	
-    	<div class="div-line">
-    		
-    	</div>
-    </div>
+   	<a href="#pagetwo" data-transition="slide" id="btn-1" name="btn">返回留言墙</a>
+  <div class="content" id='anslist'>
+ 
     
-    <span class="sp-txt">
-    		小呆  发布
-    	</span>
-    <span class="sp-txt">
-    		小呆  发布
-    	</span>
-    	 <span class="sp-time">
-    		30分钟前
-    	</span>
-    	<button name="btn">删除</button>
-     <div class="head-img">
-    <img src="img/head.png"/>
-    </div>
-  <div class="div-line"></div>
-  <span class="sp-txt">
-    		小呆  发布
-    	</span>
-    <span class="sp-txt">
-    		小呆  发布
-    	</span>
-    	 <span class="sp-time">
-    		30分钟前
-    	</span>
-    	<button name="btn">删除</button>
-     <div class="head-img">
-    	    	<img src="img/head.png"/>
-    </div>
-  <div class="div-line"></div>
-  <span class="sp-txt">
-    		小呆  发布
-    	</span>
-    <span class="sp-txt">
-    		小呆  发布
-    	</span>
-    	 <span class="sp-time">
-    		30分钟前
-    	</span>
-    	<button name="btn">删除</button>
-     <div class="head-img">
-    	    	<img src="img/head.png"/>
-    </div>
-  <div class="div-line"></div>
-  <span class="sp-txt">
-    		小呆  发布
-    	</span>
-    <span class="sp-txt">
-    		小呆  发布
-    	</span>
-    	 <span class="sp-time">
-    		30分钟前
-    	</span>
-    	<button name="btn">删除</button>
-  <div class="head-img">
-    	    	<img src="img/head.png"/>
-    </div>
-  <div class="div-line"></div>
-<span class="sp-txt">
-    		小呆  发布
-    	</span>
-    <span class="sp-txt">
-    		小呆  发布
-    	</span>
-    	 <span class="sp-time">
-    		30分钟前
-    	</span>
-    	<button name="btn">删除</button>
-  <div class="head-img">
-    	    	<img src="img/head.png"/>
-    </div>
-  <div class="div-line"></div>
-  <span class="sp-txt">
-    		小呆  发布
-    	</span>
-    	
-    <span class="sp-txt">
-    		小呆  发布
-    	</span>
-    	 <span class="sp-time">
-    		30分钟前
-    	</span>
-    	<button name="btn">删除</button>
-    	<div class="head-img">
-    	    	<img src="img/head.png"/>
-    </div>
-  <div class="div-line"></div>
-  <span class="sp-txt">
-    		小呆  发布
-    	</span>
-    <span class="sp-txt">
-    		小呆  发布
-    	</span>
-    	<div class="head-img">
-    	    	<img src="img/head.png"/>
-    </div>
-  <div class="div-line"></div>
-  <span class="sp-txt">
-    		小呆  发布
-    	</span>
-    <span class="sp-txt">
-    		小呆  发布
-    	</span>
+   
 </div>
 <div class="a-more">
 			<a >查看更多</a>
@@ -310,5 +45,58 @@ font-size: em;
    	<a href="#" class="ui-link">戳我分享给朋友</a>
    </div>
 </div>
+</div>
+
+
+<!-- 第二个页面 -->
+
+
+<div data-role="page" id="pagetwo">
+  <div class="ui-grid-b">
+     <div class="ui-block-b">
+     <img class="img-color" src="img/head_img@2x.png"/>   	
+     </div>
+     <img class="head" src="img/head.png"/>
+     <div class="div-user">
+     	<%=nickname%>
+     </div>
+     <div class="div-inp">
+     	<%=p %>
+     	？
+     </div>
+   </div>
+		<div class="content02" id='anscount'>
+		<div class="main">
+			我已经收到了<a></a>个回复
+		</div>
+		<div id="btn">
+			
+		</div>
+		<div class="a-more" id="amore">
+			<a >查看更多</a>
+		</div>
+      <div  id="bimg">
+        <a href="#pageone" data-transition="slide" id="btn-1" name="btn">查看全部回复</a>
+      </div>      
+    <div class="div-center">
+		tips：同一个标签赞同的人越多，会变得越大
+		</div>
+    	
+    <div class="control-label">
+    	
+    </div>
+   
+		</div>
+	 <div class="footer">
+   <div class="sp-footer">
+   	<a href="#" class="a-t1">此处深藏功与名</a>
+   </div>
+   <div class="sp-footer01">
+   	<a href="#" class="a-t1">戳我分享给朋友</a>
+   </div>
+   </div>
+  </div>
+   <script src="js/huifu.js" ></script>
+</div> 
 </body>
 </html>

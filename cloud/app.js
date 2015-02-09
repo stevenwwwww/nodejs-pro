@@ -60,9 +60,9 @@ app.get('/myans',function(req,res){
                 answer.getNowAnswer(userinfo,function(data){
                          var askid=data.objectId;
                          var p=data.problem;
-                          answer. getAnswer(askid,function(count,data){
-                                   res.render('camelia-page印象墙02', { count:count,data:data,askid:askid,p:p,img:img});
-                          });
+                          //answer. getAnswer(askid,function(count,data){
+                                   res.render('camelia-page回复', { askid:askid,p:p,img:img,nickname:userinfo.nickname});
+                          //});
                 })
      }else{
                var code= req.param('code');
@@ -77,18 +77,29 @@ app.get('/myans',function(req,res){
                                   answer.getNowAnswer(userinfo,function(data){
                                        var askid=data.objectId;
                                        var p=data.problem;
-                                        answer. getAnswer(askid,function(count,data){
-                                                 res.render('camelia-page印象墙02', { count:count,data:data,askid:askid,p:p,img:img});
-                                        });
+                                        //answer. getAnswer(askid,function(count,data){
+                                                 res.render('camelia-page回复', { askid:askid,p:p,img:img,nickname:userinfo.nickname});
+                                        //});
                                   })
                        })    
                 }) 
          } 
 });
 
-app.post('/allans',function(req,res){
-     var askid="54cf6322e4b0fe752de04136";
-     answer.getAnswer(askid,function(count,data){
+app.post('/countans',function(req,res){
+        var askid=req.param('askid');
+        answer. countAnswer(askid,function(count,data){
+               var rs={count:count,data:data};
+               console.log(rs);
+                res.end(JSON.stringify(rs));
+        })
+})
+
+
+
+app.post('/getans',function(req,res){
+     var askid=req.param('askid');
+     answer.getAnswer(askid,function(data){
       var rs=JSON.stringify(data);
           res.end(rs);
      });
