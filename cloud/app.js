@@ -161,8 +161,5 @@ app.get("/userinfo",function(req,res){
           })      
         })
 });
-
-
-
 // 最后，必须有这行代码来使 express 响应 HTTP 请求
 app.listen();
