@@ -116,8 +116,7 @@ color: rgba(255, 255, 255, 0);
 				/* padding-top: 2em; */
 				}
 				.div-inp {
-background: red;
-color: #000;
+background: #b41b32;
 float: left;
 position: relative;
 bottom: 3em;
@@ -125,6 +124,12 @@ border-radius: 0.5em;
 padding-left: 1.5em;
 /* right: 2%; */
 left: 5.5em;
+}
+.sp-footer a.ui-link {
+color: rgba(255, 255, 255, 0);
+}
+.sp-footer01 a.ui-link {
+color: rgba(255, 255, 255, 0);
 }
 .div-user {
 /* background: red; */

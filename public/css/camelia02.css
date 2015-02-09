@@ -1,0 +1,7 @@
+	.content {
+			position:absolute;
+			top:50%;
+			height:240px;
+			margin-top:-120px; 
+		}
+		img{width: 100%;}

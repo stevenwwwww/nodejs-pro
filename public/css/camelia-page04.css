@@ -1,0 +1,13 @@
+	   	.ui-block-b {
+			position:absolute;
+			top:20%;
+			height:240px;
+			margin-top:-120px; 
+		}
+		img{width: 100%;}
+		.content {
+			margin: 0px auto;
+			width: 12em;
+			position: relative;
+			bottom: 6em;
+		}
