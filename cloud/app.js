@@ -119,9 +119,10 @@ app.post('/addAsk',function(req,res){
             d=JSON.parse(d);
            req.session.objectid=d.objectId;
            var url = "ask?askid="+d.objectId+"&openid="+d.openid;
-           //res.redirect("ask?askid="+d.objectId+"&openid="+d.openid);
-           res.writeHead(302, {'Location':  url});
-            res.end();
+            //res.render("addAsk.html",{url:url});
+            res.redirect("ask?askid="+d.objectId+"&openid="+d.openid);
+           //res.writeHead(302, {'Location':  url});
+           // res.end();
      });
 
 });
@@ -130,7 +131,8 @@ app.get('/ask',function(req,res){
      var askid=req.param('askid');
      var openid=req.param('openid');
      console.log(askid+openid);
-     if(req.session.objectid){     	
+     if(req.session.objectid){     
+     	 	
           res.render("camelia-page02.html");
      }else{
           answer.getAnswer(askid,function(count,data){

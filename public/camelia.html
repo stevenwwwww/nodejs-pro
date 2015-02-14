@@ -118,12 +118,12 @@ font-size: em;
      </div>
    </div>
   <div data-role="content">
-    <form method="post" action="/addAsk">
+    <form method="post" data-prefetch="false" action="/addAsk">
        <div data-role="fieldcontain">
         <label for="info"></label>
         <textarea name="problem" id="info"></textarea>
       </div>
-      <input type="submit" data-mini="true" data-inline="true" value="提问并分享">
+      <input type="submit" data-mini="true"  data-prefetch="false" data-inline="true"   value="提问并分享">
     </form> 
  <script>
 	$(document).ready(function(){
@@ -133,6 +133,12 @@ font-size: em;
 	    $('#info').text($(this).val());
 	  });
 	});
+	
+$(document).ready(function() { 
+    jQuery.mobile.ajaxEnabled = false; 
+}); 
+
+
 	</script>
   
     <div class="div-btn">
