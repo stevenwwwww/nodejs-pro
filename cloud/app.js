@@ -1,7 +1,7 @@
 // 在 Cloud code 里初始化 Express 框架
 
  
-global.DEBUG = "";
+//global.DEBUG = "";
 
 
 var express = require('express');

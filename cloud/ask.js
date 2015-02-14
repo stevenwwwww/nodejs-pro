@@ -5,8 +5,9 @@ exports.addAsk= function(req,cb) {
                  var p=req.param('problem');
                  //console.log(req.session.userinfo);
                  var oid= "";
-                 if(! global.DEBUG)  oid= req.session.userinfo.openid;
-                 if(global.DEBUG)  oid='ozhyouOzAZpcZoQoqdj7dOPiaYYQ';
+                 //if(! global.DEBUG)  
+                 oid= req.session.userinfo.openid;
+                 //if(global.DEBUG)  oid='ozhyouOzAZpcZoQoqdj7dOPiaYYQ';
                  
                   
                   var ask=new Ask();
