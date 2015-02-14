@@ -4,6 +4,7 @@ exports.countAnswer=function(askid,callback){
 	console.log(sql);
   AV.Query.doCloudQuery(sql, {
   success: function(result){
+  	console.log("====query ");
     var results = JSON.stringify(result.results);
     results=JSON.parse(results);
      console.log(results);

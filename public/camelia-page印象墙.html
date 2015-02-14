@@ -170,7 +170,7 @@
 								
 		</div>
 		<div class="a-more"  id="amore">
-			<a >查看更多</a>
+			<a id='showmore'>查看更多</a>
 		</div>
 
        <form method="post" action="/addAns">		+       <form method="post" action="demo_form.php">
@@ -184,6 +184,13 @@
     		也许你想说...
     	</span>
     	<script>
+
+$('#showmore').click(function(){
+	alert(44);
+
+
+}); 
+   
 	$(function(){ 
  $('.control-label a').click(function(){
   $(this).parent().each(function () {//移除其余非点中状态
