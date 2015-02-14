@@ -5,8 +5,11 @@ exports.addAsk= function(req,cb) {
                  var p=req.param('problem');
                  //console.log(req.session.userinfo);
                  var oid= "";
-                 //if(! global.DEBUG)  
-                 oid= req.session.userinfo.openid;
+                  if(req.session.userinfo==undefined)  
+                 {   oid='ozhyouOzAZpcZoQoqdj7dOPiaYYQ';
+                 }else{ 
+                 	  oid= req.session.userinfo.openid;
+                 }
                  //if(global.DEBUG)  oid='ozhyouOzAZpcZoQoqdj7dOPiaYYQ';
                  
                   

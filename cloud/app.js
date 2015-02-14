@@ -118,9 +118,10 @@ app.post('/addAsk',function(req,res){
           var d=JSON.stringify(data);
             d=JSON.parse(d);
            req.session.objectid=d.objectId;
-           
-           
-           res.redirect("ask?askid="+d.objectId+"&openid="+d.openid);
+           var url = "ask?askid="+d.objectId+"&openid="+d.openid;
+           //res.redirect("ask?askid="+d.objectId+"&openid="+d.openid);
+           res.writeHead(302, {'Location':  url});
+            res.end();
      });
 
 });
