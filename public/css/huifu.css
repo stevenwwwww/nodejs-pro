@@ -14,8 +14,8 @@
 			left: 2em;
 			}
 			a.a-t1.ui-link {
-color: rgba(255, 255, 255, 0);
-}
+			color: rgba(255, 255, 255, 0);
+            }
 			.ui-footer.ui-bar-inherit {
             position: fixed;
 			width: 100%;
@@ -23,7 +23,6 @@ color: rgba(255, 255, 255, 0);
 			}
 			.content {
 			padding-left: 20%;
-			overflow-y: auto;
 			margin-top: 3em;
 			width: 100%;
 			height: 100%;
@@ -75,6 +74,9 @@ float: left;
 text-align: center;
 width: 50%;
 }
+#btn-1 a {
+color: rgba(255, 255, 255, 0);
+}
 .sp-footer01{
 text-align: center;
 }
@@ -84,7 +86,9 @@ text-decoration: none;
 
 .a-more {
 text-align: center;
-margin-bottom: 5em;
+position: relative;
+top: 1em;
+clear: both;
 }
 
 .ui-grid-b {
@@ -133,6 +137,37 @@ padding-left: 1.5em;
 /* right: 2%; */
 left: 5.5em;
 }
+button {
+background: #ccc;
+border: none;
+border-radius: 30px;
+font-size: 0.5em;
+width: 5em;
+height: 2em;
+padding-top: 0.1em;
+position: relative;
+bottom: 3em;
+}
+#btn-2 {
+float: right;
+width: 8em;
+height: 2em;
+background: #b41b32;
+/* margin-left: 11em; */
+font-size: 0.2em;
+position: relative;
+left: 1.1em;
+/* top: 18em; */
+border-radius: 2em;
+color: rgba(255, 255, 255, 0);
+/* font-family: -webkit-pictograph; */
+padding-top: 0.8em;
+padding-right: 1em;
+text-align: center;
+}
+#btn-2 a {
+color: rgba(255, 255, 255, 0);
+}
 .div-user {
 /* background: red; */
 /* color: #000; */
@@ -159,4 +194,22 @@ bottom: 3em;
 /* right: 2%; */
 left: 7em;
 font-size: em;
+}
+button.ui-btn.ui-shadow {
+font-size: 0.5em;
+width: 7em;
+height: 3em;
+position: relative;
+top: 1em;
+margin-top: 2em;
+}
+div#btn-main {
+/* font-size: 0.5em; */
+width: 100%;
+height: 8em;
+}
+.btn-main02 {
+float: right;
+position: relative;
+bottom: 10em;
 }

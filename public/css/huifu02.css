@@ -16,7 +16,7 @@
 				float: right;
 				width: 100%;
 				}
-				button#b1 {
+				/* button#b1 {
 				position: relative;
 				left: 70%;
 				top: 1em;
@@ -24,20 +24,15 @@
 				button#b2 {
 				float: right;
 				position: relative;
-				right: 36%;
-				/* margin: 0px auto; */
-				/* text-align: center; */
+				right: 36%;				
 				}
 				button#b3 {
 				position: relative;
 				bottom: 50px;
-				/* clear: right; */
 				}
 				button#b5 {
 				float: right;
-				}
-				.a-more {
-				text-align: center;}
+				} */
 				.content {
 				width: 100%;
 				}

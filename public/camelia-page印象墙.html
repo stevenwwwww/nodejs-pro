@@ -51,14 +51,14 @@
 				width: 100%;
 				}
 				.ui-input-text.ui-body-inherit.ui-corner-all.ui-shadow-inset {
-				/* margin-left: 5%; */
-				padding-top: 1.3em;
-				/* margin: 0 auto; */
+				margin-left: 5%;
+				padding-top: 0.7em;
+				padding-bottom: 0.7em;
 				text-align: center;
 				}
 				.ui-btn.ui-input-btn.ui-corner-all.ui-shadow.ui-btn-inline {
 				position: relative;
-				bottom: 4.1em;
+				bottom: 3.7em;
 				right: 2%;
 				float: right;
 				background: #b41b32;
@@ -78,7 +78,7 @@
 				bottom: 0;
 				}
 				.footer {
-				background: #ccc;
+				background: #000;
 				height: 30px;
 				position: fixed;
 				bottom: 0;
@@ -94,51 +94,55 @@
 				color: #656b74;
 				}
 				.special_color{
- color:#006633;
- font-family:"微软雅黑";
-} 
-.ui-grid-b {
-background: #f7f7f7;
-width: 100%;
-height: 5em;
-}
+				 color:#006633;
+				 font-family:"微软雅黑";
+				} 
+				.ui-grid-b {
+				background: #f7f7f7;
+				width: 100%;
+				height: 5em;
+				}
 
-img.img-color {
-float: left;
-z-index: 9;
-position: relative;
-width: 5em;
-}
-img.head {
-width: 5em;
-position: relative;
-z-index: 99;
-/* bottom: 70px; */
-right: 33.2%;
-}
-.div-inp {
-background: red;
-color: #000;
-float: left;
-position: relative;
-bottom: 3em;
-border-radius: 0.5em;
-padding-left: 1.5em;
-/* right: 2%; */
-left: 5.5em;
-}
-.div-user {
-/* background: red; */
-/* color: #000; */
-/* float: left; */
-position: relative;
-bottom: 3em;
-/* border-radius: 0.5em; */
-/* padding-left: 1.5em; */
-/* right: 2%; */
-left: 7em;
-font-size: em;
-}
+				img.img-color {
+				float: left;
+				z-index: 9;
+				position: relative;
+				width: 5em;
+				}
+				img.head {
+				width: 5em;
+				position: relative;
+				z-index: 99;		
+				right: 33.2%;
+				}
+                .sp-footer a {
+				color: rgba(255, 255, 255, 0);
+				}	
+				.sp-footer01 a {
+				color: rgba(255, 255, 255, 0);
+				}			
+				.div-inp {
+				background: #b41b32;
+				color: rgba(255, 255, 255, 0);
+				float: left;
+				position: relative;
+				bottom: 3em;
+				border-radius: 0.5em;
+				padding-left: 1.5em;
+				left: 5.5em;
+				}
+				.div-user {
+				/* background: red; */
+				/* color: #000; */
+				/* float: left; */
+				position: relative;
+				bottom: 3em;
+				/* border-radius: 0.5em; */
+				/* padding-left: 1.5em; */
+				/* right: 2%; */
+				left: 7em;
+				font-size: em;
+				}
 	</style>
 	</head>
 	<body>
@@ -172,8 +176,7 @@ font-size: em;
        <form method="post" action="/addAns">		+       <form method="post" action="demo_form.php">
        <div data-role="fieldcontain" id="bimg">		       <div data-role="fieldcontain" id="bimg">
         <input type="hidden" name="askid" value="<%=askid%>">		+        <input type="text" name="fullname" id="fullname" placeholder="留点儿东西再走吧">
-        <label for="fullname"></label>		
-        <input type="text" name="content" id="fullname" placeholder="留点儿东西再走吧">  
+        <label for="fullname"></label>		 
         <input id="submit" type="submit" data-inline="true" value="实名发布">
       </div>      
     </form>
@@ -192,7 +195,7 @@ font-size: em;
 })
 	</script>
     <div class="control-label">
-    	<!--<div class="div-txt" id="txt1">
+    	<div class="div-txt" id="txt1">
     	<a href="#" class="div-a">雌雄同体</a>
     	<a href="#" class="div-a">高冷女王</a>
     	<a href="#" class="div-a">移动的荷尔蒙</a>
@@ -201,7 +204,7 @@ font-size: em;
     	<a href="#" class="div-a">雌雄同体</a>
     	<a href="#" class="div-a">高冷女王</a>
     	<a href="#" class="div-a">移动的荷尔蒙</a>
-    	</div>-->
+    	</div>
     		<div class="div-txt" id="alltxt"></div>
     </div>
    

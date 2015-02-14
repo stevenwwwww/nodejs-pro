@@ -13,6 +13,7 @@
 		<script src="http://apps.bdimg.com/libs/jquerymobile/1.4.2/jquery.mobile.min.js"></script>
 	</head>
 	<body>
+    <input type="hidden" id="askid" value="54d379bee4b02af83a03db58">
 <div data-role="page" id="pageone">
 	<div class="ui-grid-b">
      <div class="ui-block-b">
@@ -20,123 +21,20 @@
      </div>
      <img class="head" src="img/head.png"/>
      <div class="div-user">
-     	amon
+     	<%=nickname%>
      </div>
      <div class="div-inp">
-     	我在你心里的印象是什么？
+      <%=p %>
+    ？
      </div>
    </div>
-   	<a href="#pagetwo" data-transition="slide" id="btn-1" name="btn">返回留言墙</a>
-  <div class="content">
-  <div class="head-img">
-    	<img src="img/head.png"/>
-    	
-    	<div class="div-line">
-    		
-    	</div>
-    </div>
+   <div id="btn-1">
+   	<a href="#pagetwo" data-transition="slide"  name="btn">返回留言墙</a>
+	</div>
+  <div class="content" id='anslist'>
+ 
     
-    <span class="sp-txt">
-    		小呆  发布
-    	</span>
-    <span class="sp-txt">
-    		小呆  发布
-    	</span>
-    	 <span class="sp-time">
-    		30分钟前
-    	</span>
-    	<button name="btn">删除</button>
-     <div class="head-img">
-    <img src="img/head.png"/>
-    </div>
-  <div class="div-line"></div>
-  <span class="sp-txt">
-    		小呆  发布
-    	</span>
-    <span class="sp-txt">
-    		小呆  发布
-    	</span>
-    	 <span class="sp-time">
-    		30分钟前
-    	</span>
-    	<button name="btn">删除</button>
-     <div class="head-img">
-    	    	<img src="img/head.png"/>
-    </div>
-  <div class="div-line"></div>
-  <span class="sp-txt">
-    		小呆  发布
-    	</span>
-    <span class="sp-txt">
-    		小呆  发布
-    	</span>
-    	 <span class="sp-time">
-    		30分钟前
-    	</span>
-    	<button name="btn">删除</button>
-     <div class="head-img">
-    	    	<img src="img/head.png"/>
-    </div>
-  <div class="div-line"></div>
-  <span class="sp-txt">
-    		小呆  发布
-    	</span>
-    <span class="sp-txt">
-    		小呆  发布
-    	</span>
-    	 <span class="sp-time">
-    		30分钟前
-    	</span>
-    	<button name="btn">删除</button>
-  <div class="head-img">
-    	    	<img src="img/head.png"/>
-    </div>
-  <div class="div-line"></div>
-<span class="sp-txt">
-    		小呆  发布
-    	</span>
-    <span class="sp-txt">
-    		小呆  发布
-    	</span>
-    	 <span class="sp-time">
-    		30分钟前
-    	</span>
-    	<button name="btn">删除</button>
-  <div class="head-img">
-    	    	<img src="img/head.png"/>
-    </div>
-  <div class="div-line"></div>
-  <span class="sp-txt">
-    		小呆  发布
-    	</span>
-    	
-    <span class="sp-txt">
-    		小呆  发布
-    	</span>
-    	 <span class="sp-time">
-    		30分钟前
-    	</span>
-    	<button name="btn">删除</button>
-    	<div class="head-img">
-    	    	<img src="img/head.png"/>
-    </div>
-  <div class="div-line"></div>
-  <span class="sp-txt">
-    		小呆  发布
-    	</span>
-    <span class="sp-txt">
-    		小呆  发布
-    	</span>
-    	<div class="head-img">
-    	    	<img src="img/head.png"/>
-    </div>
-  <div class="div-line"></div>
-  <span class="sp-txt">
-    		小呆  发布
-    	</span>
-    <span class="sp-txt">
-    		小呆  发布
-    	</span>
+   
 </div>
 <div class="a-more">
 			<a >查看更多</a>
@@ -162,47 +60,39 @@
      </div>
      <img class="head" src="img/head.png"/>
      <div class="div-user">
-     	---
+     	<%=nickname%>
      </div>
      <div class="div-inp">
      	<%=p %>
      	？
      </div>
    </div>
-		<div class="content02">
+		<div class="content02" id='anscount'>
 		<div class="main">
-			我已经收到了<a><%=count%></a>个回复
+			我已经收到了<a></a>个回复
 		</div>
-		<div id="btn">
-			 <% var i=0;
-			  for (var k in data){ %>
-			  	<button id="b1">  <%=k%>*<%=data[k]%> </button>
-			  	 <% i++;if(i==5)break;}%>
+		<div id="btn-main">		
+			<button  class=" ui-btn ui-shadow ">按钮 1</button>
+			<div class="btn-main03">
+			<button  class=" ui-btn ui-shadow ">按钮 2</button>
+			</div>
+			<button  class=" ui-btn ui-shadow ">按钮 3</button>
+			<div class="btn-main02">
+			<button  class=" ui-btn ui-shadow ">按钮 4</button>
+			<button  class=" ui-btn ui-shadow ">按钮 5</button>	
+			</div>
 		</div>
 		<div class="a-more" id="amore">
 			<a >查看更多</a>
 		</div>
       <div  id="bimg">
-        <a href="#pageone" data-transition="slide" id="btn-1" name="btn">查看全部回复</a>
+	  <div id="btn-2">
+        <a href="#pageone" data-transition="slide" name="btn">查看全部回复</a>
+		</div>
       </div>      
-    <div class="div-center">
+       <div class="div-center">
 		tips：同一个标签赞同的人越多，会变得越大
 		</div>
-    	<script>
-	$(function(){ 
- $('.control-label a').click(function(){
-  $(this).parent().each(function () {//移除其余非点中状态
-         $('.control-label a').removeClass("special_color");
-        });
-        $(this).addClass("special_color");//给所点中的增加样式
- $('#fullname').val($(this).text());//输出所点的a的内容
- })
-})
-	</script>
-    <div class="control-label">
-    	
-    </div>
-   
 		</div>
 	 <div class="footer">
    <div class="sp-footer">
@@ -213,21 +103,7 @@
    </div>
    </div>
   </div>
-   <script type="text/javascript">		
-$("#amore").click(function(){		
-$.ajax( {    		
-    url:'/allans',		
-    type:'post',    		
-    dataType:'json',    		
-    success:function(data) {    		
-       var sdiv=$("#alltxt");		
-       for(var d in data){		
-        sdiv.append("<a>"+d+"</a>")		
-       }		
-     }		
-}); 		
-});				
-  </script>
+   <script src="js/huifu.js" ></script>
 </div> 
 </body>
 </html>

@@ -1,24 +1,39 @@
 var Answer=AV.Object.extend("answer");
-exports.getAnswer=function(askid,callback){
+exports.countAnswer=function(askid,callback){
 	var sql="select count(*),content from answer where askid='"+askid+"'";
 	console.log(sql);
   AV.Query.doCloudQuery(sql, {
   success: function(result){
     var results = JSON.stringify(result.results);
     results=JSON.parse(results);
+     console.log(results);
+    console.log(result.count);
     var rs={};
     for(var o in results){
     	var k=results[o].content;
     	console.log(k)
+         if(k=='')continue;
     	if( k in rs){
                      eval("rs."+k+"++");
     	}else{
-                    eval("rs."+k+"="+1);
+                    eval("rs."+k+"=1");
     	}
     }
     console.log(rs);
-    console.log(result.count);
     callback(result.count,rs) ;
+  }
+});
+}
+
+exports.getAnswer=function(askid,callback){
+  var sql="select * from answer where askid='"+askid+"'";
+  console.log(sql);
+  AV.Query.doCloudQuery(sql, {
+  success: function(result){
+    var results = JSON.stringify(result.results);
+    results=JSON.parse(results);
+     console.log(results);
+    callback(results) ;
   }
 });
 }
