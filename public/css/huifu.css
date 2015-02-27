@@ -153,13 +153,11 @@
 		width: 8em;
 		height: 2em;
 		background: #b41b32;
-		/* margin-left: 11em; */
 		position: relative;
 		left: 1.1em;
-		/* top: 18em; */
+		font-size:0.8em;
 		border-radius: 2em;
 		color: rgba(255, 255, 255, 0);
-		/* font-family: -webkit-pictograph; */
 		padding-top: 0.8em;
 		padding-right: 1em;
 		text-align: center;
