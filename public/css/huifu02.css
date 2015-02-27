@@ -110,16 +110,7 @@ color: rgba(255, 255, 255, 0);
 				/* margin-top: 28em; */
 				/* padding-top: 2em; */
 				}
-				.div-inp {
-background: #b41b32;
-float: left;
-position: relative;
-bottom: 3em;
-border-radius: 0.5em;
-padding-left: 1.5em;
-/* right: 2%; */
-left: 5.5em;
-}
+
 .sp-footer a.ui-link {
 color: rgba(255, 255, 255, 0);
 }
