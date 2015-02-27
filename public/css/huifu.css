@@ -44,172 +44,171 @@
 			right: 5em;
 			bottom: 5em;
 			}
-	button.ui-btn.ui-shadow.ui-corner-all {
-width: 5em;
-height: 2.1em;
-font-size: 0.1em;
-/* padding-bottom: 0.1em; */
-position: relative;
-/* float: right; */
-/* padding-right: 3em; */
-margin-right: 25%;
-/* right: 5%; */
-bottom: 7.5em;
-left: 12em;
-}
-.footer {
-background: #000;
-height: 30px;
-position: fixed;
-bottom: 0;
-width: 100%;
-margin-top: 0px;
-margin-right: auto;
-margin-bottom: 0px;
-margin-left: auto;
-padding-top: 1em;
-}
-.sp-footer {
-float: left;
-text-align: center;
-width: 50%;
-}
-#btn-1 a {
-color: rgba(255, 255, 255, 0);
-}
-.sp-footer01{
-text-align: center;
-}
-a.ui-link {
-text-decoration: none;
-}
+			button.ui-btn.ui-shadow.ui-corner-all {
+		width: 5em;
+		height: 2.1em;
+		font-size: 0.1em;
+		/* padding-bottom: 0.1em; */
+		position: relative;
+		/* float: right; */
+		/* padding-right: 3em; */
+		margin-right: 25%;
+		/* right: 5%; */
+		bottom: 7.5em;
+		left: 12em;
+		}
+		.footer {
+		background: #000;
+		height: 30px;
+		position: fixed;
+		bottom: 0;
+		width: 100%;
+		margin-top: 0px;
+		margin-right: auto;
+		margin-bottom: 0px;
+		margin-left: auto;
+		padding-top: 1em;
+		}
+		.sp-footer {
+		float: left;
+		text-align: center;
+		width: 50%;
+		}
+		#btn-1 a {
+		color: rgba(255, 255, 255, 0);
+		}
+		.sp-footer01{
+		text-align: center;
+		}
+		a.ui-link {
+		text-decoration: none;
+		}
 
-.a-more {
-text-align: center;
-position: relative;
-top: 1em;
-clear: both;
-}
+		.a-more {
+		text-align: center;
+		position: relative;
+		top: 1em;
+		clear: both;
+		}
 
-.ui-grid-b {
-background: #f7f7f7;
-width: 100%;
-height: 5em;
-}
-img.head {
-width: 5em;
-position: relative;
-z-index: 99;
-/* bottom: 70px; */
-right: 33.2%;
-}
-img.img-color {
-float: left;
-z-index: 9;
-position: relative;
-width: 5em;
-}
-#btn-1 {
-float: right;
-width: 8em;
-height: 2em;
-background: #b41b32;
-/* margin-left: 11em; */
-font-size: 0.2em;
-position: relative;
-left: 1.1em;
-top: 1.5em;
-border-radius: 2em;
-color: rgba(255, 255, 255, 0);
-/* font-family: -webkit-pictograph; */
-padding-top: 0.8em;
-padding-right: 1em;
-text-align: center;
-}
-.div-inp {
-background: #b41b32;
-color: rgba(255, 255, 255, 0);
-float: left;
-position: relative;
-bottom: 3em;
-border-radius: 0.5em;
-padding-left: 1.5em;
-/* right: 2%; */
-left: 5.5em;
-}
-button {
-background: #ccc;
-border: none;
-border-radius: 30px;
-font-size: 0.5em;
-width: 5em;
-height: 2em;
-padding-top: 0.1em;
-position: relative;
-bottom: 3em;
-}
-#btn-2 {
-float: right;
-width: 8em;
-height: 2em;
-background: #b41b32;
-/* margin-left: 11em; */
-font-size: 0.2em;
-position: relative;
-left: 1.1em;
-/* top: 18em; */
-border-radius: 2em;
-color: rgba(255, 255, 255, 0);
-/* font-family: -webkit-pictograph; */
-padding-top: 0.8em;
-padding-right: 1em;
-text-align: center;
-}
-#btn-2 a {
-color: rgba(255, 255, 255, 0);
-}
-.div-user {
-/* background: red; */
-/* color: #000; */
-/* float: left; */
-position: relative;
-bottom: 3em;
-/* border-radius: 0.5em; */
-/* padding-left: 1.5em; */
-/* right: 2%; */
-left: 7em;
-font-size: em;
-}
-a.ui-link {
-color: rgba(255, 255, 255, 0);
-}
-.div-user {
-/* background: red; */
-/* color: #000; */
-/* float: left; */
-position: relative;
-bottom: 3em;
-/* border-radius: 0.5em; */
-/* padding-left: 1.5em; */
-/* right: 2%; */
-left: 7em;
-font-size: em;
-}
-button.ui-btn.ui-shadow {
-font-size: 0.5em;
-width: 7em;
-height: 3em;
-position: relative;
-top: 1em;
-margin-top: 2em;
-}
-div#btn-main {
-/* font-size: 0.5em; */
-width: 100%;
-height: 8em;
-}
-.btn-main02 {
-float: right;
-position: relative;
-bottom: 10em;
-}
+		.ui-grid-b {
+		background: #f7f7f7;
+		width: 100%;
+		height: 5em;
+		}
+		img.head {
+		width: 5em;
+		position: relative;
+		z-index: 99;
+		/* bottom: 70px; */
+		right: 33.2%;
+		}
+		img.img-color {
+		float: left;
+		z-index: 9;
+		position: relative;
+		width: 5em;
+		}
+		#btn-1 {
+		float: right;
+		width: 8em;
+		height: 2em;
+		background: #b41b32;
+		/* margin-left: 11em; */
+		font-size: 0.2em;
+		position: relative;
+		left: 1.1em;
+		top: 1.5em;
+		border-radius: 2em;
+		color: rgba(255, 255, 255, 0);
+		/* font-family: -webkit-pictograph; */
+		padding-top: 0.8em;
+		padding-right: 1em;
+		text-align: center;
+		}
+		.div-inp {
+		background: #b41b32;
+		color: rgba(255, 255, 255, 0);
+		float: left;
+		position: relative;
+		bottom: 3em;
+		border-radius: 0.5em;
+		padding-left: 1.5em;
+		/* right: 2%; */
+		left: 5.5em;
+		}
+		button {
+		background: #ccc;
+		border: none;
+		border-radius: 30px;
+		font-size: 0.5em;
+		width: 5em;
+		height: 2em;
+		padding-top: 0.1em;
+		position: relative;
+		bottom: 3em;
+		}
+		#btn-2 {
+		float: right;
+		width: 8em;
+		height: 2em;
+		background: #b41b32;
+		/* margin-left: 11em; */
+		position: relative;
+		left: 1.1em;
+		/* top: 18em; */
+		border-radius: 2em;
+		color: rgba(255, 255, 255, 0);
+		/* font-family: -webkit-pictograph; */
+		padding-top: 0.8em;
+		padding-right: 1em;
+		text-align: center;
+		}
+		#btn-2 a {
+		color: rgba(255, 255, 255, 0);
+		}
+		.div-user {
+		/* background: red; */
+		/* color: #000; */
+		/* float: left; */
+		position: relative;
+		bottom: 3em;
+		/* border-radius: 0.5em; */
+		/* padding-left: 1.5em; */
+		/* right: 2%; */
+		left: 7em;
+		font-size: em;
+		}
+		a.ui-link {
+		color: rgba(255, 255, 255, 0);
+		}
+		.div-user {
+		/* background: red; */
+		/* color: #000; */
+		/* float: left; */
+		position: relative;
+		bottom: 3em;
+		/* border-radius: 0.5em; */
+		/* padding-left: 1.5em; */
+		/* right: 2%; */
+		left: 7em;
+		font-size: em;
+		}
+		button.ui-btn.ui-shadow {
+		font-size: 0.5em;
+		width: 7em;
+		height: 3em;
+		position: relative;
+		top: 1em;
+		margin-top: 2em;
+		}
+		div#btn-main {
+		/* font-size: 0.5em; */
+		width: 100%;
+		height: 8em;
+		}
+		.btn-main02 {
+		float: right;
+		position: relative;
+		bottom: 10em;
+		}
