@@ -125,17 +125,18 @@
 		text-align: center;
 		}
 		.div-inp {
-		background: #b41b32;
-		color: rgba(255, 255, 255, 0);
-		float: left;
-		width: 15em;
-		position: relative;
-		bottom: 3em;
-		border-radius: 0.5em;
-		padding-left: 1.5em;
-		/* right: 2%; */
-		left: 5.5em;
-		}
+background: #b41b32;
+color: rgba(255, 255, 255, 0);
+float: left;
+font-size: 0.3em;
+width: 5em;
+position: relative;
+bottom: 3.5em;
+border-radius: 0.5em;
+padding-left: 1.3em;
+/* right: 2%; */
+left: 6.5em;
+}
 		button {
 		background: #ccc;
 		border: none;
