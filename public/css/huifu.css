@@ -128,14 +128,14 @@
 background: #b41b32;
 color: rgba(255, 255, 255, 0);
 float: left;
-font-size: 0.3em;
-width: 5em;
+font-size: 1.2em;
+width: 8em;
 position: relative;
-bottom: 3.5em;
+bottom: 2.5em;
 border-radius: 0.5em;
 padding-left: 1.3em;
 /* right: 2%; */
-left: 6.5em;
+left: 5em;
 }
 		button {
 		background: #ccc;
