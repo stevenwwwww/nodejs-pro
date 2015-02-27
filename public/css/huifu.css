@@ -130,13 +130,13 @@ color: rgba(255, 255, 255, 0);
 float: left;
 font-size: 0.6em;
 width: 18em;
-height:1.2em;
+height:1.8em;
 position: relative;
 bottom: 4.5em;
 border-radius: 1em;
 padding-left: 1em;
 /* right: 2%; */
-left: 12em;
+left: 11em;
 }
 		button {
 		background: #ccc;
