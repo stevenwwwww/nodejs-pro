@@ -119,8 +119,8 @@ app.post('/addAsk',function(req,res){
             d=JSON.parse(d);
            req.session.objectid=d.objectId;
            var url = "ask?askid="+d.objectId+"&openid="+d.openid;
-           res.render("addAsk.html",{url:url});
-           //res.redirect("ask?askid="+d.objectId+"&openid="+d.openid);
+           //res.render("addAsk.html",{url:url});
+           res.redirect("ask?askid="+d.objectId+"&openid="+d.openid);
            //res.writeHead(302, {'Location':  url});
            // res.end();
      });
