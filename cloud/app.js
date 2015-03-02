@@ -156,9 +156,9 @@ app.post('/addAns',function(req,res){
      answer.addAns(req,res);
     
      var  myheadurl="img/head.png";//default
-      if(req.session.userinfo!=undefined  ){
+     if(req.session.userinfo!=undefined  ){
           myheadurl = req.session.userinfo.headimgurl; ;
-      } 
+      }  
       res.render('relyResult', { img:myheadurl});
       
      // res.render('relyResult', { img:''});
