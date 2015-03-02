@@ -125,19 +125,19 @@
 		text-align: center;
 		}
 		.div-inp {
-background: #b41b32;
-color: rgba(255, 255, 255, 0);
-float: left;
-font-size: 0.6em;
-width: 18em;
-height:1.8em;
-position: relative;
-bottom: 4.3em;
-border-radius: 1em;
-padding-left: 1em;
-/* right: 2%; */
-left: 11em;
-}
+		background: #b41b32;
+		color: rgba(255, 255, 255, 0);
+		float: left;
+		font-size: 0.6em;
+		width: 18em;
+		height:1.8em;
+		position: relative;
+		bottom: 4.3em;
+		border-radius: 1em;
+		padding-left: 1em;
+		/* right: 2%; */
+		left: 11em;
+		}
 		button {
 		background: #ccc;
 		border: none;
@@ -195,8 +195,8 @@ left: 11em;
 		}
 		button.ui-btn.ui-shadow {
 		font-size: 0.5em;
-		width: 7em;
-		height: 3em;
+		width: 12em;
+		height: 5em;
 		position: relative;
 		top: 1em;
 		margin-top: 2em;
@@ -209,5 +209,5 @@ left: 11em;
 		.btn-main02 {
 		float: right;
 		position: relative;
-		bottom: 10em;
+		bottom: 5em;
 		}
