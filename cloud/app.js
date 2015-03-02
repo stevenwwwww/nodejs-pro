@@ -154,12 +154,31 @@ app.get('/ask',function(req,res){
 
 app.post('/addAns',function(req,res){
      answer.addAns(req,res);
-    
-     var  myheadurl="img/head.png";//default
-     if(req.session.userinfo!=undefined  ){
-          myheadurl = req.session.userinfo.headimgurl; ;
-      }  
-      res.render('relyResult', { img:myheadurl});
+     
+      var userinfo=req.session.userinfo;
+      if(userinfo){
+                var img=userinfo.headimgurl;
+               if (img==''){
+                       img="img/head.png";//default
+                 }
+        res.render('relyResult', { img:img});
+      }else{
+                var code= req.param('code');
+                wx.openid(code,function(data){
+                        wx.userinfo(data,function(d){
+                              userinfo=JSON.parse(d);
+                              req.session.userinfo=userinfo;
+                              var img=userinfo.headimgurl;
+                               if (img==''){
+                                   img="img/head.png";//default
+                               }
+                               res.render('relyResult', { img:img});
+                        })    
+              })
+      }
+      
+      
+     
       
      // res.render('relyResult', { img:''});
 });

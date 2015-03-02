@@ -69,6 +69,7 @@ exports.getNowAnswer=function(userinfo,cb){
 
 
 exports.addAns= function(req,res) {
+ 
                  var c=req.param('content');     
                  var aid=req.param('askid');
                    var oid=req.param('oid');
@@ -76,7 +77,7 @@ exports.addAns= function(req,res) {
                   answer.save({content:c,askid:aid,openid:oid},{
                                  success:function(object){
                                  	console.log(object);
-                                                 res.end();
+                                       //res.end();
                                  }
 
                  });
