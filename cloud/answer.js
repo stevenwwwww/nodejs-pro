@@ -39,12 +39,12 @@ exports.getAnswer=function(askid,callback){
      var rs={};
     for(var o in results){
     	var k=results[o].content;
-    	console.log(k)
+    	//console.log(k)
         if(k=='')continue;
     	if( k in rs){
              eval("rs."+k+"++");
     	}else{
-             eval("rs."+k+"=1");
+           //  eval("rs."+k+"=1");
     	}
     }
      console.log(rs);
@@ -69,7 +69,7 @@ exports.getNowAnswer=function(userinfo,cb){
 
 
 exports.addAns= function(req,res) {
-                 var c=req.param('content');
+                 var c=req.param('content');     
                  var aid=req.param('askid');
                    var oid=req.param('oid');
                   var answer=new Answer();
