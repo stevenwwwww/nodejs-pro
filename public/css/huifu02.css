@@ -93,13 +93,6 @@ color: rgba(255, 255, 255, 0);
 				position: relative;
 				width: 5em;
 				}
-				img.head {
-				width: 5em;
-				position: relative;
-				z-index: 99;
-				/* bottom: 70px; */
-				right: 33.2%;
-				}
 				.div-center {
 				/* margin: 0px auto; */
 				text-align: center;
