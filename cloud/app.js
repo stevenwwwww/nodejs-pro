@@ -139,7 +139,7 @@ app.get('/ask',function(req,res){
      var openid=req.param('openid');
      console.log(askid+openid);
      if(req.session.objectid){     
-     	 	
+     	 	 
           res.render("addAsk.html");
      }else{
           answer.getAnswer(askid,function(count,data){
