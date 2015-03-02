@@ -27,14 +27,28 @@ exports.countAnswer=function(askid,callback){
 }
 
 exports.getAnswer=function(askid,callback){
-  var sql="select * from answer where askid='"+askid+"'";
-  console.log(sql);
+  var sql="select count(*),* from answer where askid='"+askid+"'";
+  //console.log(sql);
   AV.Query.doCloudQuery(sql, {
   success: function(result){
-    var results = JSON.stringify(result.results);
-    results=JSON.parse(results);
-     console.log(results);
-    callback(results) ;
+    // console.log("====query ");
+     var results = JSON.stringify(result.results);
+     results=JSON.parse(results);
+     //console.log(results.get);
+     console.log(result.count);
+     var rs={};
+    for(var o in results){
+    	var k=results[o].content;
+    	console.log(k)
+        if(k=='')continue;
+    	if( k in rs){
+             eval("rs."+k+"++");
+    	}else{
+             eval("rs."+k+"=1");
+    	}
+    }
+     console.log(rs);
+     callback(result.count,rs) ;
   }
 });
 }

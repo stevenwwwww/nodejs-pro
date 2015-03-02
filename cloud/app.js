@@ -138,12 +138,15 @@ app.get('/ask',function(req,res){
      var askid=req.param('askid');
      var openid=req.param('openid');
      console.log(askid+openid);
-     if(req.session.objectid){     
-     	 	 
+     /*if(req.session.objectid){     
+     	 	
           res.render("addAsk.html");
-     }else{
-          answer.getAnswer(askid,function(count,data){
-           res.render('camelia-pageimpression', { count:count,data:data,askid:askid});
+     }else */
+     {
+          answer.getAnswer(askid,  function(count, data){         
+          
+            var img="";
+            res.render('camelia-pageimpression', { count:count,data:data, askid:askid, img:img});
           });
      }
      

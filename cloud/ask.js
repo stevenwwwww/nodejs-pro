@@ -5,16 +5,20 @@ exports.addAsk= function(req,cb) {
                  var p=req.param('problem');
                  //console.log(req.session.userinfo);
                  var oid= "";
+                 var headimgurl='';
                   if(req.session.userinfo==undefined)  
                  {   oid='ozhyouOzAZpcZoQoqdj7dOPiaYYQ';
                  }else{ 
                  	  oid= req.session.userinfo.openid;
+                 	  headimgurl = req.session.userinfo.headimgurl; 
                  }
                  //if(global.DEBUG)  oid='ozhyouOzAZpcZoQoqdj7dOPiaYYQ';
-                  
+                 
 
                   var ask=new Ask();
-                  ask.save({problem:p,openid:oid},{
+                  ask.save({problem:p,
+                  	              openid:oid,
+                  	              headimgurl: headimgurl},{
                                  success:function(data){
                                  	//console.log(data);
                                                  //res.end();
