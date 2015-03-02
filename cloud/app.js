@@ -140,7 +140,7 @@ app.get('/ask',function(req,res){
      console.log(askid+openid);
      if(req.session.objectid){     
      	 	
-          res.render("camelia-page02.html");
+          res.render(addAsk.html");
      }else{
           answer.getAnswer(askid,function(count,data){
            res.render('camelia-page印象墙', { count:count,data:data,askid:askid});
