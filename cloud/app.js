@@ -65,7 +65,7 @@ app.get('/myans',function(req,res){
                          var askid=data.objectId;
                          var p=data.problem;
                           //answer. getAnswer(askid,function(count,data){
-                                   res.render('camelia-page回复', { askid:askid,p:p,img:img,nickname:userinfo.nickname});
+                                   res.render('camelia-pagereturn', { askid:askid,p:p,img:img,nickname:userinfo.nickname});
                           //});
                 })
      }else{
@@ -82,7 +82,7 @@ app.get('/myans',function(req,res){
                                        var askid=data.objectId;
                                        var p=data.problem;
                                         //answer. getAnswer(askid,function(count,data){
-                                                 res.render('camelia-page回复', { askid:askid,p:p,img:img,nickname:userinfo.nickname});
+                                                 res.render('camelia-pagereturn', { askid:askid,p:p,img:img,nickname:userinfo.nickname});
                                         //});
                                   })
                        })    
@@ -140,10 +140,10 @@ app.get('/ask',function(req,res){
      console.log(askid+openid);
      if(req.session.objectid){     
      	 	
-          res.render(camelia-page02.html");
+          res.render("camelia-page02.html");
      }else{
           answer.getAnswer(askid,function(count,data){
-           res.render('camelia-page印象墙', { count:count,data:data,askid:askid});
+           res.render('camelia-pageimpression', { count:count,data:data,askid:askid});
           });
      }
      
