@@ -152,7 +152,7 @@ app.get('/ask',function(req,res){
 });
 
 app.post('/addAns',function(req,res){
-     answer.addAns(req,res);
+     ask.addReply(req, function(){});
      
       var userinfo=req.session.userinfo;
       if(userinfo){
