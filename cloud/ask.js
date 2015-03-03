@@ -64,6 +64,28 @@ exports.allAsk=function(callback){
 });
 }
 
+function AddAnswer(res){
+	var ASK = AV.Object.extend("ask"); 
+	 var query = new AV.Query(ASK);
+			query.equalTo("objectId", "54f57155e4b0c976f0206466");
+			query.first({
+			  success: function(ask) {
+                  var x= ask.get("others").length;				  
+			      ask.increment("Q1"); //系统固定评论Q1自增1
+			      ask.increment("Q2"); //系统固定评论Q2自增1
+			      ask.addUnique("others", "用户自定义评论1"); 			      
+			      ask.save(null, {
+					  success: function(ask) {			    
+					  },
+					  error: function(ask, error) {			     
+					  }
+				});
+			  },
+			  error: function(error) {
+			    //alert("Error: " + error.code + " " + error.message);
+			  }
+			}); 
+}
 
 
 
