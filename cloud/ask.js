@@ -66,17 +66,10 @@ exports.allAsk=function(callback){
 //对本问题的回复
 exports.addReply= function (req, callback){
 	            
-                 var oid= "";
-                 var headimgurl='';
-                  if(req.session.userinfo==undefined)  
-                 {   oid='ozhyouOzAZpcZoQoqdj7dOPiaYYQ';
-                 }else{ 
-                 	  oid= req.session.userinfo.openid;
-                 	  headimgurl = req.session.userinfo.headimgurl; 
-                 }
-                 
+	              var askid= req.param('askid');  //'xxxxxx';// 前端有传递过来吗？
+	              
 	              var query = new AV.Query(Ask); //找到前面的评论
-					query.equalTo("openid", oid);
+					query.equalTo("objectId", askid);  
 					query.first({
 					  success: function(ask) {	
 							  	if(ask !=undefined) { // 找着了
