@@ -1,0 +1,91 @@
+.ui-grid-b {
+background: #f7f7f7;width:100%;height:5em;
+}
+.ui-header.ui-bar-inherit {
+background: #080808;
+color: #fff;
+}
+.ui-footer.ui-bar-inherit {
+background: #080808;
+color: #fff;
+position: fixed;
+bottom: 0;
+width: 100%;
+}
+.ui-btn.ui-input-btn.ui-corner-all.ui-shadow.ui-btn-inline {
+/*position: relative;
+left: 170px;*/
+}
+img {
+width: 100%;
+/*height: 100%;*/
+}
+img.user-img {
+width: 25%;
+position: relative;
+bottom: 95px;
+}
+/*.ui-content {
+position: relative;
+bottom: 80px;
+}
+*/
+.ui-block-a
+{
+background-color: lightgray;
+border: 1px solid black;
+height: 100px;
+font-weight: bold;
+text-align: center;
+padding: 30px;
+}
+.ui-btn.ui-input-btn.ui-corner-all.ui-shadow.ui-btn-inline.ui-mini {
+float: right;
+}
+img.head-low {
+position: absolute;
+ float: right; 
+height: 100px;
+}
+img.img-color {
+float: left;
+z-index: 9;
+position: relative;
+width: 5em;
+}
+img.head {
+width: 5em;
+position: relative;
+z-index: 99;
+/* bottom: 70px; */
+right: 33.2%;
+border-radius: 40px;
+}
+
+.div-btn {
+clear: both;
+margin-bottom: 3em;
+}
+.div-inp {
+background: red;
+color: #000;
+float: left;
+position: relative;
+bottom: 3em;
+border-radius: 0.5em;
+padding-left: 1.5em;
+/* right: 2%; */
+left: 5.5em;
+}
+.div-user {
+/* background: red; */
+/* color: #000; */
+/* float: left; */
+position: relative;
+bottom: 3em;
+/* border-radius: 0.5em; */
+/* padding-left: 1.5em; */
+/* right: 2%; */
+left: 7em;
+font-size: em;
+}
