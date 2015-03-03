@@ -85,8 +85,8 @@ exports.addReply= function (req, callback){
 									  	 	ask.addUnique("others", Qother); 		
 									  	 }
 								  	 }else{ //如果是系统固定评论
-								  	 	  if(Q > 0  &&  Q<50){
-								  	 	     ask.increment('Q'+Q); //系统固定评论Q2自增1
+								  	 	  if(QQ > 0  &&  QQ<50){
+								  	 	     ask.increment('Q'+QQ); //系统固定评论Q2自增1
 								  	 	  }
 								  	 }
 								      ask.increment("Totalcount"); //总评论个数								      
