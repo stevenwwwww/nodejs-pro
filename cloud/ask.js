@@ -13,7 +13,7 @@ exports.addAsk= function(req,cb) {
                  	  headimgurl = req.session.userinfo.headimgurl; 
                  }
      
-                 var query = new AV.Query(ASK); //找到前面的评论
+                 var query = new AV.Query(ask); //找到前面的评论
 					query.equalTo("openid", oid);
 					query.first({
 					  success: function(ask) {	
