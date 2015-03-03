@@ -144,7 +144,6 @@ app.get('/ask',function(req,res){
      }else */
      {
           answer.getAnswer(askid,  function(count, data){         
-           console();
             var img="";
             res.render('camelia-pageimpression', { count:count,data:data, askid:askid, img:img});
           });
