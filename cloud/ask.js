@@ -12,20 +12,61 @@ exports.addAsk= function(req,cb) {
                  	  oid= req.session.userinfo.openid;
                  	  headimgurl = req.session.userinfo.headimgurl; 
                  }
-                 //if(global.DEBUG)  oid='ozhyouOzAZpcZoQoqdj7dOPiaYYQ';
-                 
-
-                  var ask=new Ask();
-                  ask.save({problem:p,
-                  	              openid:oid,
-                  	              headimgurl: headimgurl},{
-                                 success:function(data){
-                                 	//console.log(data);
-                                                 //res.end();
-                                                 cb(data);
-                                 }
-
-                 });
+     
+                 var query = new AV.Query(ASK); //找到前面的评论
+					query.equalTo("openid", oid);
+					query.first({
+					  success: function(ask) {	
+							  	if(ask !=undefined) { // 找着了
+							  		var QQ      =req.param('QQ'); //得到前端传过来的 系统自定义的 Q的id（数字）
+							  		var Qother =req.param('other'); //前端传过来的，自定义评论
+						          if(Qother)//如果是自定义评论
+						          { 	var   others = ask.get("others");
+									  	 if( others.length > 200){  //自定义超过 200个了
+									  	 	  others.shift(); 
+									  	 	   others.push(  Qother); 	
+									  	 	  ask.set('others', others);   
+									  	 }else{
+									  	 	ask.addUnique("others", Qother); 		
+									  	 }
+								  	 }else{ //如果是系统固定评论
+								  	 	  if(Q > 0  &&  Q<50){
+								  	 	     ask.increment('Q'+Q); //系统固定评论Q2自增1
+								  	 	  }
+								  	 }
+								      ask.increment("Totalcount"); //总评论个数								      
+								      	      
+								      ask.save(null, {
+										  success: function(ask) {	
+										  	   cb(data);		    
+										  },
+										  error: function(ask, error) {			     
+										  }
+									});
+									
+								 }else{	  //没有新评论结果的情况下
+								 	
+				                  var ask=new Ask();
+				                  ask.save({problem:p,
+				                  	              openid:oid,
+				                  	              headimgurl: headimgurl},{
+				                                 success:function(data){
+				                                       cb(data);
+				                                 }
+				
+				                 });
+			                 }	
+							
+						  },
+						  error: function(error) {
+						    //alert("Error: " + error.code + " " + error.message);
+						  }
+						  
+						  
+						  
+						
+	               
+               }); 
 }
 
 exports.delAsk= function(req,cb) {
