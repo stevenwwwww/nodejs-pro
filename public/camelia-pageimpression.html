@@ -38,14 +38,14 @@
 			<a id='showmore'>查看更多</a>
 		</div>
 
-       <form method="post" action="/addAns">		+       <form method="post" action="demo_form.php">
-       <div data-role="fieldcontain" id="bimg">		       <div data-role="fieldcontain" id="bimg">
+       <form method="post" action="/addAns">	
+	   <div data-role="fieldcontain" id="bimg">
         <input type="hidden" name="askid" value="<%=askid%>">		+       
-         <input type="text" name="QQ" id="fullname" placeholder="留点儿东西再走吧" maxlength="12">
+         <input type="text" name="other" id="fullname" placeholder="留点儿东西再走吧" maxlength="12">
         <label for="content"></label>		 
         <input id="submit" type="submit" data-inline="true" value="实名发布" >
       </div>      
-    </form>
+ 
     <span id="sp-txt" >
     		也许你想说...
     	</span>
@@ -65,18 +65,25 @@ $(function(){
 	</script>
     <div class="control-label">
     	<div class="div-txt" id="txt1">
-    	<a href="#" class="div-a">雌雄同体</a>
-    	<a href="#" class="div-a">高冷女王</a>
-    	<a href="#" class="div-a">移动的荷尔蒙</a>
+    		 <input type=radio name=QQ value=0 checked style='display:none'>
+    	<label><input type=radio name=QQ value=1>雌雄同体</label>
+    	<label><input type=radio name=QQ value=2>高冷女王</label>
+    	<label><input type=radio name=QQ value=3>移动的荷尔蒙</label>
     	</div>
     	<div class="div-txt">
-    	<a href="#" class="div-a">雌雄同体</a>
-    	<a href="#" class="div-a">高冷女王</a>
-    	<a href="#" class="div-a">移动的荷尔蒙</a>
+    	<label><input type=radio name=QQ value=4>雌雄同体xxx</label>
+    	<label><input type=radio name=QQ value=5>高冷女王fff</label>
+    	<label><input type=radio name=QQ value=6>移动的荷尔蒙yyy</label>
     	</div>
     		<div class="div-txt" id="alltxt"></div>
     </div>
-   
+    
+    
+    </form>  
+    
+    
+    
+    
 		</div>
 		<div class="footer">
    <span class="sp-footer">
@@ -88,6 +95,13 @@ $(function(){
 		</div>
   </div>
    <script type="text/javascript">		
+   	$('input[name=QQ]').click(function(){
+   		$('input[name=other]').attr('placeholder',$(this).parent().text());  		
+   		
+   	});
+   	
+   	
+   	
 $("#amore").click(function(){		
 $.ajax( {    		
    url:'/allans',		
