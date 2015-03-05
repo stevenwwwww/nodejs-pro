@@ -67,7 +67,7 @@ exports.getNowAnswer=function(userinfo,cb){
                 });
 }
 
-
+//结果
 exports.addAns= function(req,res) {
  
                  var c=req.param('content');     
