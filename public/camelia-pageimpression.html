@@ -31,13 +31,11 @@
 			<% var i=0;
 			  for (var k in data){ %>
 			  	<button id="b1">  <%=k%>*<%=data[k]%> </button>
-			  	 <% i++;if(i==5)break;}%>
-								
+			  	 <% i++;if(i==5)break;}%>								
 		</div>
 		<div class="a-more"  id="amore">
 			<a id='showmore'>查看更多</a>
 		</div>
-
        <form method="post" action="/addAns">	
 	   <div data-role="fieldcontain" id="bimg">
         <input type="hidden" name="askid" value="<%=askid%>">		+       
@@ -45,7 +43,6 @@
         <label for="content"></label>		 
         <input id="submit" type="submit" data-inline="true" value="实名发布" >
       </div>      
- 
     <span id="sp-txt" >
     		也许你想说...
     	</span>
