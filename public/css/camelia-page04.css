@@ -10,3 +10,22 @@
 			position: relative;
 			bottom: 6em;
 		}
+	    img.img-head {
+		width: 3.5em;
+		}
+		.content {
+		margin: 0px auto;
+		width: 12em;
+		position: relative;
+		bottom: 13em;
+		}
+		img#img-my {
+		position: relative;
+		z-index: 99;
+		top: 1.5em;
+		}
+		img#your {
+		position: relative;
+		bottom: 5em;
+		left: 4em;
+		}
